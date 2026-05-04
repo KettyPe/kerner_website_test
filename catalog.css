@@ -534,6 +534,11 @@ button {
      font-weight: 600;
      color: #272425;
      line-height: 20.3px;
+     transition: color 0.3s ease 0s;
+}
+
+.product-card__name:hover {
+     color: #0cbcf1;
 }
 
 .product-card__bottom {

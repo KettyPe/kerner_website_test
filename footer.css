@@ -233,6 +233,9 @@
     .footer__main {
         padding-bottom: 20px;
     }
+    .footer__bottom {
+        padding-bottom: 70px;
+    }
     .footer__bottom-container {
         display: flex;
         flex-direction: column-reverse;
