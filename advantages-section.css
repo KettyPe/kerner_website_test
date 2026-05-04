@@ -1,0 +1,343 @@
+.advantages-section {
+     padding: 70px 0;
+     background: #fff;
+}
+
+.advantages-grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+}
+
+.adv-card {
+     padding: 30px;
+     min-height: 300px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     box-sizing: border-box;
+}
+
+.adv-card--white {
+     background: #fff;
+}
+.adv-card--gray {
+     background: #eceeee;
+}
+.adv-card--outline {
+     outline: 2px solid #eceeee;
+     outline-offset: -2px;
+}
+.adv-card--relative {
+     position: relative;
+     overflow: hidden;
+}
+
+.adv-card__title {
+     font-size: 29px;
+     font-weight: 600;
+     line-height: 1.4;
+     color: #272425;
+     margin: 0;
+}
+
+.adv-stats {
+     display: flex;
+     gap: 30px;
+}
+
+.adv-stat-value {
+     font-size: 49px;
+     font-weight: 500;
+     color: #009bc8;
+     line-height: 1.2;
+     margin-bottom: 9px;
+}
+
+.adv-stat-label {
+     font-size: 14px;
+     color: #758589;
+     font-weight: 500;
+}
+
+.adv-card__subtitle {
+     font-size: 23px;
+     font-weight: 600;
+     color: #272425;
+     margin-bottom: 15px;
+}
+
+.adv-card__text {
+     font-size: 18px;
+     font-weight: 500;
+     color: #758589;
+     line-height: 1.4;
+}
+
+.adv-card__text a {
+     color: #272425;
+     text-decoration: underline;
+     transition: color 0.3s ease 0s;
+}
+
+.adv-card__text a:hover {
+     color: var(--accent-blue);
+}
+
+.adv-card__icon {
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
+     width: 90px;
+     pointer-events: none;
+}
+
+.adv-features {
+     display: flex;
+     gap: 15px;
+}
+
+.adv-feature-box {
+     flex: 1;
+     background: #fff;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.adv-feature-label {
+     font-weight: 500;
+     font-size: 14px;
+     color: #758589;
+     margin-bottom: 12px;
+}
+.adv-feature-value {
+     font-size: 16px;
+     color: #272425;
+     font-weight: 500;
+}
+
+.adv-card--delivery {
+     grid-column: span 2;
+}
+
+.adv-card__map {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     height: 100%;
+     z-index: 0;
+}
+
+.adv-card__content {
+     max-width: 481px;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.adv-delivery-list {
+     position: relative;
+     z-index: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.adv-delivery-item {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+.adv-delivery-city {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     font-size: 16px;
+     font-weight: 500;
+     color: #272425;
+}
+
+.adv-delivery-arrow {
+     width: 28px;
+     height: 24px;
+}
+
+.adv-delivery-time {
+     font-size: 16px;
+     font-weight: 500;
+     color: #272425;
+}
+
+.adv-card__btn {
+     background: #0f385a;
+     color: #fff;
+     padding: 12px 20px;
+     border: none;
+     font-size: 15px;
+     font-weight: 700;
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     width: fit-content;
+     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+     .adv-card {
+          padding: 20px;
+     }
+     .adv-card__map {
+          height: 80%;
+     }
+     .adv-card__content {
+          max-width: 364px;
+     }
+     .adv-card__text {
+          font-size: 16px;
+     }
+     .adv-stat-value {
+          font-size: 34px;
+     }
+     .adv-card__title {
+          font-size: 24px;
+     }
+     .adv-card__subtitle {
+          font-size: 20px;
+     }
+}
+
+@media (max-width: 1024px) {
+     .advantages-grid {
+          grid-template-columns: 1fr 1fr;
+     }
+     .adv-card--delivery {
+          grid-column: span 2;
+     }
+     .adv-card__map {
+          height: 100%;
+     }
+}
+
+@media (max-width: 768px) {
+     .advantages-grid {
+          grid-template-columns: 1fr;
+     }
+     .adv-card--delivery {
+          grid-column: span 1;
+     }
+     .adv-card {
+          min-height: 182px;
+          gap: 30px;
+     }
+     .adv-card__icon {
+          width: 60px;
+          right: 20px;
+          bottom: 20px;
+     }
+     .adv-delivery-list {
+          margin-top: 20px;
+     }
+     .adv-card--white {
+          padding: 0px;
+          gap: 15px;
+          padding-bottom: 20px;
+     }
+}
+
+@media (max-width: 640px) {
+     .adv-card {
+          gap: 20px;
+     }
+     .adv-card__title {
+          font-size: 22px;
+     }
+     .adv-stat-value {
+          font-size: 35px;
+          margin-bottom: 0px;
+     }
+     .adv-stat-label {
+          font-size: 13px;
+     }
+     .adv-card__subtitle {
+          margin-bottom: 10px;
+     }
+
+     .adv-card--relative {
+          min-height: 229px;
+     }
+     .adv-card__icon {
+          right: 15px;
+          bottom: 15px;
+     }
+     .adv-features {
+          flex-direction: column;
+          gap: 10px;
+     }
+     .adv-feature-box {
+          padding: 10px 15px;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 10px;
+     }
+     .adv-feature-label {
+          margin-bottom: 0px;
+     }
+     .adv-card--outline {
+          padding: 30px;
+     }
+     .adv-card__btn {
+          margin-top: 20px;
+          font-size: 13px;
+     }
+     .adv-card__btn img {
+          width: 15px;
+          height: 15px;
+     }
+     .adv-card__text {
+          font-size: 18px;
+     }
+
+     .adv-card--delivery {
+          padding: 20px 20px 187px 20px !important;
+          min-height: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+     }
+
+     .adv-card__map {
+          top: 136px;
+          position: absolute;
+          pointer-events: none;
+     }
+
+     .adv-delivery-list {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+     }
+
+     .adv-delivery-item {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          flex-wrap: wrap;
+     }
+
+     .adv-delivery-arrow {
+          width: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+     }
+
+     .adv-delivery-time {
+          font-size: 16px;
+          font-weight: 500;
+          color: #272425;
+     }
+}

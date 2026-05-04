@@ -1,0 +1,372 @@
+/* --- REVIEWS SECTION --- */
+.reviews {
+    padding: 70px 0;
+    background-color: var(--bg-white); /* Белый фон из root */
+}
+
+.reviews__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* 1. Блок инфо и рейтинга */
+.reviews__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reviews__title {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 42px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.reviews__subtitle {
+    font-size: 18px;
+    line-height: 25.2px;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.reviews__rating {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Логотип Яндекса в рейтинге */
+.reviews__yandex-badge {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews__yandex-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.reviews__score-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reviews__score-value {
+    font-size: 81px;
+    font-weight: 500;
+    line-height: 74.52px;
+    color: var(--text-dark);
+}
+
+.reviews__score-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reviews__stars {
+    display: flex;
+    gap: 7px;
+}
+
+.reviews__stars li img {
+    width: 31.2px;
+    height: 31.2px;
+}
+
+.reviews__count {
+    color: var(--text-gray);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+}
+
+.reviews__quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.review-card {
+    position: relative;
+    padding: 30px;
+    border: 2px solid var(--border-light);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review-card__text {
+    font-size: 14px;
+    line-height: 18.2px;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+    padding-right: 40px;
+}
+
+.review-card__more {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    color: var(--accent-blue);
+    text-decoration: underline;
+    align-self: flex-start;
+}
+
+.review-card__platform-icon {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 60px;
+    height: 60px;
+}
+
+.platform-svg-wrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    overflow: hidden;
+}
+
+/* Точное позиционирование SVG внутри блока 60x60 */
+.platform-svg-wrapper img {
+    position: absolute;
+    width: 47.5px;
+    height: 35px;
+    left: 6.25px;
+    top: 12.5px;
+    object-fit: contain;
+}
+
+/* 3. Блок благодарственных писем */
+.reviews__letters {
+    background-color: var(--border-light); /* #ECEEEE */
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.letters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.letters-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 23.8px;
+    color: var(--text-dark);
+}
+
+.letters-nav {
+    display: flex;
+    gap: 0;
+}
+
+.letters-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.letters-arrow--prev {
+    transform: rotate(0deg);
+}
+
+/* .letters-grid {
+    display: flex;
+    gap: 20px;
+} */
+
+.letters-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.letters-arrow {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    cursor: pointer;
+    padding: 5px;
+    transition:
+        color var(--transition-fast),
+        opacity var(--transition-fast);
+}
+
+.letters-arrow:hover {
+    color: var(--accent-blue);
+}
+
+.letters-arrow.swiper-button-disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.letter-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+}
+
+.letter-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letter-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.letter-caption {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: var(--text-gray);
+    text-align: center;
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 1200px) {
+    .reviews__container,
+    .reviews__quotes {
+        gap: 20px;
+    }
+    .reviews__title {
+        font-size: 26px;
+        line-height: 35px;
+    }
+    .reviews__score-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .reviews__score-value {
+        font-size: 70px;
+    }
+    .reviews__letters {
+        padding: 20px;
+        height: max-content;
+    }
+    /*     .reviews__container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .reviews__letters {
+        grid-column: span 2;
+    } */
+}
+
+@media (max-width: 992px) {
+    .reviews,
+    .video-reviews,
+    .help-section,
+    .advantages-section {
+        padding: 30px 0px;
+    }
+    .reviews__container {
+        grid-template-columns: 1fr;
+    }
+    .reviews__letters {
+        grid-column: span 1;
+    }
+    .reviews__score-value {
+        font-size: 64px;
+    }
+    .reviews__score-wrapper {
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .letters-slider {
+        margin-bottom: -17px;
+    }
+}
+
+@media (max-width: 640px) {
+    .reviews__title {
+        font-size: 22px;
+        line-height: 140%;
+    }
+    .reviews__subtitle {
+        font-size: 16px;
+        line-height: 140%;
+    }
+    .reviews__rating {
+        margin-top: 25px;
+    }
+    .reviews__yandex-badge {
+        width: 50px;
+        height: 50px;
+    }
+    .reviews__stars li img {
+        width: 24.4px;
+        height: 24.4px;
+    }
+    .reviews__count {
+        font-size: 15px;
+    }
+    .reviews__score-meta {
+        gap: 7px;
+    }
+    .review-card {
+        padding: 20px;
+    }
+
+    .letters-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 360px) {
+    .reviews__yandex-badge {
+        width: 40px;
+        height: 40px;
+    }
+    .reviews__rating {
+        gap: 15px;
+    }
+    .reviews__score-value {
+        font-size: 46px;
+    }
+    .reviews__stars li img {
+        width: 25.4px;
+        height: 25.4px;
+    }
+}
