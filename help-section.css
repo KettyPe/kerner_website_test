@@ -216,12 +216,14 @@
 }
 
 .custom-checkbox input:checked + .custom-checkbox__box::after {
-    content: "✓";
-    color: #ffffff;
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 19px;
+    height: 19px;
     transform: translate(-50%, -50%);
+    background: url(./icons/check-white.svg) no-repeat;
 }
 
 .custom-checkbox__text {
