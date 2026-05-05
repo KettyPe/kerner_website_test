@@ -70,6 +70,11 @@
     line-height: 23.4px;
     color: var(--dark-grey);
     margin: 0;
+    transition: color 0.3s ease 0s;
+}
+
+.expert-card__title:hover {
+    color: var(--accent-blue);
 }
 
 .expert-card__descr {

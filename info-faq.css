@@ -110,6 +110,11 @@
     background-color: var(--bg-grey);
     border-radius: 2px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.accordion__item:hover {
+    background-color: #d8d8d8;
 }
 
 .accordion__header {

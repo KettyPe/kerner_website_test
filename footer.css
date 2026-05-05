@@ -161,22 +161,10 @@
 
 /* Кнопка */
 .footer__btn {
-    width: 100%;
-    height: 60px;
-    background: var(--dark-blue);
-    color: #fff;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    font-weight: 700;
-    cursor: pointer;
+
 }
 
-.footer__btn span {
-    font-size: 15px;
-}
+
 
 /* Bottom */
 .footer__bottom {

@@ -72,29 +72,6 @@
     /* max-width: 500px; */
 }
 
-/* Кнопка */
-.btn-white {
-    display: inline-flex;
-    align-items: center;
-    gap: 15px;
-    background: #ffffff;
-    color: var(--text-dark);
-    text-decoration: none;
-    padding: 18px 34px;
-    font-weight: 700;
-    font-size: 15px;
-    transition: background var(--transition-fast);
-    white-space: nowrap;
-}
-
-.btn-white:hover {
-    background: #f8f9fa;
-}
-
-.btn-white__icon {
-    width: 18px;
-    height: 18px;
-}
 
 /* Адаптивность */
 @media (max-width: 1200px) {

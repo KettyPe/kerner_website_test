@@ -1,6 +1,7 @@
 /* 1. Global Variables & Design System */
 :root {
     /* Colors (будем дополнять из Figma) */
+    --cyan-color: #0cbcf1;
     --primary-color: #2563eb;
     --text-main: #1f2937;
     --text-muted: #6b7280;
@@ -11,6 +12,7 @@
     --border-light: #eceeee;
     --accent-blue: #009bc8;
     --dark-blue: #0f385a;
+    --dark-blue-02: #18578b;
     --bg-search: #eceeee;
     --text-dark: #272425;
     --transition-fast: 0.2s ease;
@@ -67,6 +69,7 @@ body {
     font-family: var(--font-main);
     -webkit-font-smoothing: antialiased; /* Делает шрифт более четким на Mac/iOS */
     -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
     line-height: 1.5;
     color: var(--text-main);
     background-color: var(--bg-white);
@@ -81,6 +84,51 @@ button {
     outline: none;
     border: none;
     background: none;
+    cursor: pointer;
+    font-family: var(--font);
+}
+
+.button {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px;
+    transition: background-color 0.3s ease 0s;
+}
+
+.button span {
+    font-weight: 700;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.button svg {
+    transition: transform 0.3s ease 0s;
+}
+
+.button-blue {
+    color: #fff;
+    background-color: var(--dark-blue);
+}
+
+.button-white {
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+.button-white:hover {
+    background-color: #ebebeb;
+}
+
+.button-blue:hover {
+    background-color: var(--dark-blue-02);
+}
+
+.button:hover svg {
+    transform: translateX(2.5px);
 }
 
 .no-scroll {
@@ -132,7 +180,12 @@ button {
     white-space: nowrap;
 }
 
-.top-bar__link:hover {
+.top-bar__link span {
+    transition: color 0.3s ease 0s;
+}
+
+.top-bar__link:hover,
+.top-bar__link:hover span {
     color: var(--primary-dark);
 }
 
@@ -297,12 +350,15 @@ button {
     font-size: 12px;
     color: var(--text-gray);
 }
+
 .contact-item-header__value {
     font-size: 17px;
     font-weight: 700;
     color: var(--text-dark);
     text-decoration: none;
+    transition: color 0.3s ease 0s;
 }
+
 .contact-item-header__value--blue {
     color: var(--accent-blue);
     text-decoration: underline;
@@ -310,6 +366,14 @@ button {
 
 .contact-item-header__mobile-item {
     display: none;
+}
+
+.contact-item-header__value:hover {
+    color: var(--accent-blue);
+}
+
+.contact-item-header__value--blue:hover {
+    color: #0f385a;
 }
 
 /* Action Buttons & Badges */
@@ -713,7 +777,7 @@ button {
     background-color: #ffffff;
 }
 
-.burder-menu-button,
+.burger-menu-button,
 .mobile-menu,
 .mobile-search-container {
     display: none;
@@ -869,7 +933,7 @@ button {
         display: none;
     }
     .contact-item-header__mobile-item,
-    .burder-menu-button {
+    .burger-menu-button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1099,7 +1163,7 @@ button {
         max-width: 79%;
     }
     .main-header {
-        padding: 10px 0px;
+        padding: 10px 0px 0px 0px;
     }
     .main-header__contacts,
     .social-icons,
@@ -1110,8 +1174,8 @@ button {
         max-width: 116px;
     }
     .mobile-search-container {
+        padding: 10px 0px;
         margin-bottom: 10px;
-        padding-bottom: 10px;
     }
     .mobile-menu {
         top: 60px;
@@ -1167,7 +1231,7 @@ button {
 
 @media (max-width: 370px) {
     .contact-item-header__mobile-item,
-    .burder-menu-button,
+    .burger-menu-button,
     .social-btn {
         width: 35px;
         height: 35px;
