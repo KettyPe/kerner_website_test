@@ -89,7 +89,7 @@ button {
     height: 100vh;
     position: fixed;
     left: 0;
-    top: 0;
+    /* top: 0; */
     width: 100%;
 }
 
@@ -189,6 +189,10 @@ button {
 .main-header {
     padding: 20px 0;
     border-bottom: 1px solid var(--border-light);
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 100;
 }
 
 .main-header__container {
@@ -1095,7 +1099,7 @@ button {
         max-width: 79%;
     }
     .main-header {
-        padding: 10px 0px 0px 0px;
+        padding: 10px 0px;
     }
     .main-header__contacts,
     .social-icons,
@@ -1106,8 +1110,8 @@ button {
         max-width: 116px;
     }
     .mobile-search-container {
-        padding: 10px 0px;
         margin-bottom: 10px;
+        padding-bottom: 10px;
     }
     .mobile-menu {
         top: 60px;
