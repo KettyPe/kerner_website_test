@@ -457,5 +457,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const alsoBuySwiper = new Swiper('.also-buy-slider', {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        navigation: {
+            prevEl: '.also-buy-arrow-prev',
+            nextEl: '.also-buy-arrow-next',
+        },
+
+        pagination: {
+            el: '.also-buy-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1.15,
+                spaceBetween: 12,
+            },
+            480: {
+                slidesPerView: 2.1,
+                spaceBetween: 16,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        },
+    });
+
 });
 

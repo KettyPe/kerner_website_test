@@ -100,7 +100,6 @@
 }
 
 .delivery-payment__btn {
-     height: 50px !important;
      width: auto !important;
 }
 
@@ -338,5 +337,115 @@
      .delivery-payment__private {
           flex-direction: column;
           align-items: flex-start;
+     }
+}
+
+/* ============================================================
+   ALSO BUY SECTION
+   ============================================================ */
+.also-buy {
+     padding: 70px 0;
+     background: #fff;
+}
+
+.also-buy__head {
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+     margin-bottom: 30px;
+}
+
+.also-buy__title {
+     font-size: 30px;
+     font-weight: 600;
+     color: #272425;
+     line-height: 42px;
+}
+
+.also-buy__subtitle {
+     font-size: 18px;
+     font-weight: 500;
+     color: #758589;
+     line-height: 25.2px;
+}
+
+/* Обёртка слайдера — position: relative для кнопок */
+.also-buy-slider-wrapper {
+     position: relative;
+}
+
+/* Карточка */
+.also-buy-card {
+     height: 381px;
+     padding: 30px;
+     background: #eceeee;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     overflow: hidden;
+     position: relative;
+}
+
+/* Изображение — абсолютное, снизу справа */
+.also-buy-card__img-wrap {
+     position: absolute;
+     inset: 0;
+     pointer-events: none;
+}
+
+.also-buy-card__img {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     width: auto;
+     height: 65%;
+     object-fit: contain;
+     object-position: bottom right;
+     mix-blend-mode: darken;
+}
+
+/* Название поверх картинки */
+.also-buy-card__title {
+     font-size: 23px;
+     font-weight: 600;
+     color: #272425;
+     line-height: 33.35px;
+     position: relative;
+     z-index: 1;
+    max-width: 95%;
+}
+
+/* Кнопка */
+.also-buy-card__btn {
+     position: relative;
+     z-index: 1;
+     max-width: 147px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+     .also-buy__title {
+          font-size: 24px;
+          line-height: 33px;
+     }
+
+     .also-buy__subtitle {
+          font-size: 16px;
+     }
+
+     .also-buy-card {
+          height: 340px;
+          padding: 20px;
+     }
+
+     .also-buy-card__title {
+          font-size: 19px;
+          max-width: 60%;
+     }
+
+     .also-buy-card__img {
+          height: 55%;
      }
 }
