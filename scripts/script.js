@@ -422,5 +422,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    const analoguesSwiper = new Swiper('.analogues-products-slider', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+
+        navigation: {
+            nextEl: '.analogues-products-arrow-next',
+            prevEl: '.analogues-products-arrow-prev',
+        },
+
+        pagination: {
+            el: '.analogues-products-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 1
+            },
+            370: {
+                slidesPerView: 2
+            },
+            768: {
+                slidesPerView: 3
+            },
+            1100: {
+                slidesPerView: 4
+            },
+            1280: {
+                slidesPerView: 5
+            }
+        }
+    });
+
 });
 
