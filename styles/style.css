@@ -97,6 +97,11 @@ button {
     transition: background-color 0.3s ease 0s;
 }
 
+.button-50 {
+  height: 50px;
+  padding: 0px 20px;
+}
+
 .button span {
     font-weight: 700;
     font-size: 15px;
