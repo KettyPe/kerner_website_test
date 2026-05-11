@@ -4225,6 +4225,167 @@
           </div>
      </div>
 
+     <section class="delivery-payment">
+          <div class="container">
+               <div class="delivery-payment__grid">
+
+                    <!-- ===== ДОСТАВКА ===== -->
+                    <div class="delivery-payment__card">
+                         <div class="delivery-payment__card-inner">
+
+                              <div class="delivery-payment__top">
+                                   <h2 class="delivery-payment__title">Доставка</h2>
+
+                                   <ul class="delivery-payment__list">
+                                        <li class="delivery-payment__list-item">
+                                             <img src="img/icons/check-blue.svg" alt="" width="22" height="22">
+                                             <span>Бесплатно до терминала «Деловые Линии» в Санкт-Петербурге</span>
+                                        </li>
+                                        <li class="delivery-payment__list-item">
+                                             <img src="img/icons/check-blue.svg" alt="" width="22" height="22">
+                                             <span>Отправка в регионы РФ через любые ТК (по согласованию)</span>
+                                        </li>
+                                        <li class="delivery-payment__list-item">
+                                             <img src="img/icons/check-blue.svg" alt="" width="22" height="22">
+                                             <span>Доставка по Санкт-Петербургу через сервис «Яндекс Доставка»</span>
+                                        </li>
+                                   </ul>
+
+                                   <div class="delivery-payment__calc">
+                                        <div class="delivery-payment__input-wrap">
+                                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                                  <path d="M4.81385 9.1437L15.5022 4.05437C17.0605 3.31187 18.6867 4.93895 17.9451 6.4982L12.8558 17.1856C12.16 18.6459 10.0517 18.556 9.48335 17.0408L8.54285 14.53C8.45095 14.2851 8.3077 14.0627 8.12271 13.8777C7.93772 13.6927 7.71529 13.5494 7.47035 13.4575L4.95868 12.5161C3.44435 11.9478 3.3536 9.83945 4.81385 9.1437Z"
+                                                       stroke="#758589" stroke-width="1.83333" stroke-linecap="round"
+                                                       stroke-linejoin="round" />
+                                             </svg>
+                                             <input type="text" placeholder="Введите город доставки"
+                                                  class="delivery-payment__input">
+                                        </div>
+                                        <button class="delivery-payment__btn button button-blue">
+                                             <span>Рассчитать</span>
+                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M11.2487 14.5834L15.832 10.0001L11.2487 5.41675M14.7904 10.0001H3.95703"
+                                                       stroke="white" stroke-width="1.66667" stroke-linecap="square" />
+                                             </svg>
+                                        </button>
+                                   </div>
+                              </div>
+
+                              <div class="delivery-payment__bottom">
+                                   <p class="delivery-payment__tc-label">
+                                        Доставка осуществляется через проверенные транспортные компании:
+                                   </p>
+                                   <div class="delivery-payment__logos">
+                                        <div class="delivery-payment__logo-item">
+                                             <img src="img/delivery-logos/yandex-delivery.svg" alt="Яндекс Доставка">
+                                        </div>
+                                        <div class="delivery-payment__logo-item">
+                                             <img src="img/delivery-logos/pek.svg" alt="ПЭК">
+                                        </div>
+                                        <div class="delivery-payment__logo-item">
+                                             <img src="img/delivery-logos/delovye-linii.svg" alt="Деловые Линии">
+                                        </div>
+                                        <div class="delivery-payment__logo-item">
+                                             <img src="img/delivery-logos/dpd.svg" alt="DPD">
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+
+                    <!-- ===== ОПЛАТА И ДОКУМЕНТЫ ===== -->
+                    <div class="delivery-payment__card">
+                         <div class="delivery-payment__card-inner">
+
+                              <h2 class="delivery-payment__title">Оплата и документы</h2>
+
+                              <ul class="delivery-payment__list">
+                                   <li class="delivery-payment__list-item">
+                                        <img src="img/icons/check-blue.svg" alt="" width="22" height="22">
+                                        <span>НДС 22% включен во все счета на оборудование</span>
+                                   </li>
+                                   <li class="delivery-payment__list-item">
+                                        <img src="img/icons/check-blue.svg" alt="" width="22" height="22">
+                                        <span>Мгновенные документы: Счёт-фактура и УПД в день отгрузки</span>
+                                   </li>
+                                   <li class="delivery-payment__list-item">
+                                        <img src="img/icons/check-blue.svg" alt="" width="22" height="22">
+                                        <span>Отсрочка платежа (для постоянных партнеров)</span>
+                                   </li>
+                              </ul>
+
+                              <!-- ЭДО блок -->
+                              <div class="delivery-payment__edo">
+                                   <p class="delivery-payment__edo-title">Документооборот через ЭДО</p>
+                                   <div class="delivery-payment__edo-grid">
+
+                                        <div class="delivery-payment__edo-item">
+                                             <span class="delivery-payment__edo-label">СБИС:</span>
+                                             <div class="delivery-payment__edo-field">
+                                                  <span class="delivery-payment__edo-code"
+                                                       id="sbisCode">2BE7B0D2D0819EC4352A8E42DF42A4B47A7</span>
+                                                  <button class="delivery-payment__copy-btn" data-copy="sbisCode"
+                                                       aria-label="Скопировать">
+                                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                            <path d="M4.66406 6.4445C4.66406 5.97295 4.85139 5.52071 5.18483 5.18727C5.51827 4.85383 5.97051 4.6665 6.44206 4.6665H12.2194C12.4529 4.6665 12.6841 4.71249 12.8998 4.80185C13.1155 4.8912 13.3115 5.02217 13.4766 5.18727C13.6417 5.35237 13.7727 5.54838 13.8621 5.76409C13.9514 5.97981 13.9974 6.21101 13.9974 6.4445V12.2218C13.9974 12.4553 13.9514 12.6865 13.8621 12.9022C13.7727 13.118 13.6417 13.314 13.4766 13.4791C13.3115 13.6442 13.1155 13.7751 12.8998 13.8645C12.6841 13.9538 12.4529 13.9998 12.2194 13.9998H6.44206C6.20857 13.9998 5.97737 13.9538 5.76165 13.8645C5.54593 13.7751 5.34993 13.6442 5.18483 13.4791C5.01972 13.314 4.88876 13.118 4.7994 12.9022C4.71005 12.6865 4.66406 12.4553 4.66406 12.2218V6.4445Z"
+                                                                 stroke="#009BC8" stroke-width="1.33333"
+                                                                 stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M2.67467 11.158C2.47 11.0417 2.29977 10.8733 2.18127 10.6699C2.06277 10.4665 2.00023 10.2354 2 10V3.33333C2 2.6 2.6 2 3.33333 2H10C10.5 2 10.772 2.25667 11 2.66667"
+                                                                 stroke="#009BC8" stroke-width="1.33333"
+                                                                 stroke-linecap="round" stroke-linejoin="round" />
+                                                       </svg>
+                                                  </button>
+                                             </div>
+                                        </div>
+
+                                        <div class="delivery-payment__edo-item">
+                                             <span class="delivery-payment__edo-label">Астрал-Калуга:</span>
+                                             <div class="delivery-payment__edo-field">
+                                                  <span class="delivery-payment__edo-code"
+                                                       id="astralCode">2AE858621C8-54B9-4C74-BE40-74C86BA345E7</span>
+                                                  <button class="delivery-payment__copy-btn" data-copy="astralCode"
+                                                       aria-label="Скопировать">
+                                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                            <path d="M4.66406 6.4445C4.66406 5.97295 4.85139 5.52071 5.18483 5.18727C5.51827 4.85383 5.97051 4.6665 6.44206 4.6665H12.2194C12.4529 4.6665 12.6841 4.71249 12.8998 4.80185C13.1155 4.8912 13.3115 5.02217 13.4766 5.18727C13.6417 5.35237 13.7727 5.54838 13.8621 5.76409C13.9514 5.97981 13.9974 6.21101 13.9974 6.4445V12.2218C13.9974 12.4553 13.9514 12.6865 13.8621 12.9022C13.7727 13.118 13.6417 13.314 13.4766 13.4791C13.3115 13.6442 13.1155 13.7751 12.8998 13.8645C12.6841 13.9538 12.4529 13.9998 12.2194 13.9998H6.44206C6.20857 13.9998 5.97737 13.9538 5.76165 13.8645C5.54593 13.7751 5.34993 13.6442 5.18483 13.4791C5.01972 13.314 4.88876 13.118 4.7994 12.9022C4.71005 12.6865 4.66406 12.4553 4.66406 12.2218V6.4445Z"
+                                                                 stroke="#009BC8" stroke-width="1.33333"
+                                                                 stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path d="M2.67467 11.158C2.47 11.0417 2.29977 10.8733 2.18127 10.6699C2.06277 10.4665 2.00023 10.2354 2 10V3.33333C2 2.6 2.6 2 3.33333 2H10C10.5 2 10.772 2.25667 11 2.66667"
+                                                                 stroke="#009BC8" stroke-width="1.33333"
+                                                                 stroke-linecap="round" stroke-linejoin="round" />
+                                                       </svg>
+                                                  </button>
+                                             </div>
+                                        </div>
+
+                                   </div>
+                              </div>
+
+                              <!-- Частные лица -->
+                              <div class="delivery-payment__private">
+                                   <div class="delivery-payment__private-text">
+                                        <p class="delivery-payment__private-title">Также доступно для частных лиц:</p>
+                                        <p class="delivery-payment__private-sub">Онлайн-оплата без комиссии и СБП на
+                                             складе</p>
+                                   </div>
+                                   <div class="delivery-payment__pay-logos">
+                                        <div class="delivery-payment__pay-logo">
+                                             <img src="img/payment-logos/mir.svg" alt="МИР">
+                                        </div>
+                                        <div class="delivery-payment__pay-logo">
+                                             <img src="img/payment-logos/sbp.svg" alt="СБП">
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
      <section class="analogues-products">
           <div class="container">
                <h2 class="section-title">Аналоги и похожие товары</h2>

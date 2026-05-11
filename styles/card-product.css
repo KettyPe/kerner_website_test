@@ -1,0 +1,342 @@
+/* ============================================================
+   DELIVERY & PAYMENT SECTION
+   ============================================================ */
+.delivery-payment {
+     padding: 70px 0;
+     background: #fff;
+}
+
+.delivery-payment__grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap: 30px;
+     align-items: stretch;
+}
+
+/* Карточка */
+.delivery-payment__card {
+     background: #eceeee;
+}
+
+.delivery-payment__card-inner {
+     height: 100%;
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 21px;
+}
+
+/* Верх карточки доставки */
+.delivery-payment__top {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     gap: 20px;
+}
+
+/* Заголовок */
+.delivery-payment__title {
+     font-size: 30px;
+     font-weight: 600;
+     color: #272425;
+     line-height: 42px;
+}
+
+/* Список пунктов */
+.delivery-payment__list {
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.delivery-payment__list-item {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     font-size: 14px;
+     font-weight: 500;
+     color: #272425;
+     line-height: 20.3px;
+}
+
+.delivery-payment__list-item img {
+     flex-shrink: 0;
+}
+
+/* Калькулятор доставки */
+.delivery-payment__calc {
+     display: flex;
+     align-items: flex-end;
+     gap: 20px;
+     padding-top: 15px;
+}
+
+.delivery-payment__input-wrap {
+     flex: 0 1 350px;
+     flex-shrink: 0;
+     height: 50px;
+     padding: 10px;
+     background: #fff;
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+.delivery-payment__input {
+     flex: 1;
+     border: none;
+     outline: none;
+     font-size: 14px;
+     font-weight: 500;
+     color: #272425;
+     font-family: var(--font, "Roboto", sans-serif);
+     background: transparent;
+}
+
+.delivery-payment__input::placeholder {
+     color: #272425;
+}
+
+.delivery-payment__btn {
+     height: 50px !important;
+     width: auto !important;
+}
+
+/* Низ карточки — лейбл + логотипы ТК */
+.delivery-payment__bottom {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     padding-top: 15px;
+}
+
+.delivery-payment__tc-label {
+     font-size: 14px;
+     font-weight: 500;
+     color: #758589;
+     line-height: 20.3px;
+}
+
+.delivery-payment__logos {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+}
+
+.delivery-payment__logo-item {
+     flex: 1;
+     height: 50px;
+     background: #dee1e2;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 8px;
+}
+
+.delivery-payment__logo-item img {
+     max-height: 26px;
+     width: auto;
+     object-fit: contain;
+}
+
+/* ЭДО блок */
+.delivery-payment__edo {
+     padding: 10px;
+     background: #fff;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.delivery-payment__edo-title {
+     font-size: 14px;
+     font-weight: 600;
+     color: #272425;
+     line-height: 20.3px;
+}
+
+.delivery-payment__edo-grid {
+     display: flex;
+     gap: 20px;
+}
+
+.delivery-payment__edo-item {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     min-width: 0;
+}
+
+.delivery-payment__edo-label {
+     font-size: 10px;
+     font-weight: 500;
+     color: #272425;
+     line-height: 14.5px;
+}
+
+.delivery-payment__edo-field {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 6px;
+     padding: 5px;
+     background: #eceeee;
+     outline: 1px solid #eceeee;
+}
+
+.delivery-payment__edo-code {
+     font-size: 10px;
+     font-weight: 500;
+     color: #272425;
+     line-height: 14.5px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     flex: 1;
+}
+
+.delivery-payment__copy-btn {
+     background: none;
+     border: none;
+     cursor: pointer;
+     padding: 0;
+     flex-shrink: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 16px;
+     height: 16px;
+}
+
+/* Частные лица */
+.delivery-payment__private {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 10px;
+     padding-top: 20px;
+     border-top: 1px solid #dadfe2;
+     margin-top: auto;
+}
+
+.delivery-payment__private-title {
+     font-size: 14px;
+     font-weight: 700;
+     color: #272425;
+     line-height: 18.2px;
+}
+
+.delivery-payment__private-sub {
+     font-size: 14px;
+     font-weight: 500;
+     color: #758589;
+     line-height: 20.3px;
+}
+
+.delivery-payment__pay-logos {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     flex-shrink: 0;
+}
+
+.delivery-payment__pay-logo {
+     height: 35px;
+     background: #dee1e2;
+     padding: 6px 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.delivery-payment__pay-logo img {
+     max-height: 24px;
+     width: auto;
+     object-fit: contain;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1280px) {
+     .delivery-payment__calc {
+          flex-direction: column;
+          align-items: flex-start;
+     }
+     .delivery-payment__input-wrap {
+          flex: 1 1 auto;
+          width: 100%;
+     }
+     .delivery-payment__btn {
+          width: 100% !important;
+     }
+     .delivery-payment__edo-grid {
+          flex-direction: column;
+          gap: 10px;
+     }
+     .delivery-payment__logos {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 15px;
+          row-gap: 10px;
+     }
+}
+
+@media (max-width: 900px) {
+     .delivery-payment__grid {
+          grid-template-columns: 1fr;
+     }
+
+     .delivery-payment__calc {
+          flex-direction: column;
+          align-items: stretch;
+     }
+
+     .delivery-payment__input-wrap {
+          width: 100%;
+     }
+}
+
+@media (max-width: 540px) {
+     .delivery-payment__edo-grid {
+          flex-direction: column;
+     }
+
+     .delivery-payment__logos {
+          flex-wrap: wrap;
+     }
+
+     .delivery-payment__logo-item {
+          flex: 1 1 calc(50% - 10px);
+     }
+
+     .delivery-payment__top,
+     .delivery-payment__card-inner {
+          gap: 15px;
+     }
+
+     .delivery-payment__edo,
+     .delivery-payment__private {
+          margin-top: 6px;
+     }
+
+     .delivery-payment__card-inner {
+          padding: 20px;
+     }
+
+     .delivery-payment__title {
+          font-size: 22px;
+     }
+
+     .delivery-payment__list-item {
+          align-items: flex-start;
+     }
+
+     .delivery-payment__private {
+          flex-direction: column;
+          align-items: flex-start;
+     }
+}
