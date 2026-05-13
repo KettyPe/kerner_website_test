@@ -98,8 +98,8 @@ button {
 }
 
 .button-50 {
-  height: 50px;
-  padding: 0px 20px;
+    height: 50px;
+    padding: 0px 20px;
 }
 
 .button span {
@@ -1075,10 +1075,10 @@ button {
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
- .adv-card__btn:hover {
+.adv-card__btn:hover {
     background: var(--color-accent);
     transition: all 0.3s ease 0s;
-    }
+}
 /* === catalog.css === */
 
 .catalog-page {
@@ -1175,7 +1175,7 @@ button {
 }
 
 .filter-row input[type="checkbox"]::after {
-   content: "";
+    content: "";
     display: none;
     width: 19px;
     height: 19px;
@@ -2124,7 +2124,7 @@ button {
 .category-card:hover {
     background: var(--color-border-mid);
     outline: 1px solid var(--color-border-mid);
-    transition: all 0.3s ease 0s;   
+    transition: all 0.3s ease 0s;
 }
 
 .category-card__logo-box {
@@ -2155,8 +2155,7 @@ button {
     color: var(--color-dark);
     text-align: center;
     margin-bottom: 2px;
-    transition: all 0.3s ease 0s;   
-
+    transition: all 0.3s ease 0s;
 }
 /*
 .category-card:hover .category-card__name {
@@ -2873,14 +2872,6 @@ button {
     align-items: flex-start;
 }
 
-.main-section-title {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1.4;
-    color: var(--color-dark);
-    margin-bottom: 25px;
-}
-
 .info-faq__text-block {
     flex: 1;
 }
@@ -3439,37 +3430,9 @@ button {
     margin: 0;
 }
 
-/* .slider-controls {
-     display: flex;
-     gap: 12px;
+.analogues-products__title {
+    margin-bottom: 30px;
 }
-
-.slider-btn {
-     width: 45px;
-     height: 45px;
-     border-radius: 50%;
-     backdrop-filter: blur(20.200000762939453px);
-     box-shadow: 0 5px 20px 0 rgba(15, 56, 90, 0.12);
-     background-color: var(--color-white);
-     border: none;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     cursor: pointer;
-     transition: all 0.3s ease;
-     padding: 0;
-}
-
-.slider-btn svg path {
-     stroke: currentColor;
-     transition: stroke 0.3s ease;
-}
-
-.slider-btn:hover {
-     background-color: var(--color-dark-blue);
-     color: var(--color-white);
-     border-color: var(--color-dark-blue);
-} */
 
 .video-card {
     height: 275px;
@@ -4283,7 +4246,7 @@ button {
         margin-top: 20px;
         font-size: 13px;
     }
-   
+
     .adv-card__btn img {
         width: 15px;
         height: 15px;
@@ -4575,6 +4538,26 @@ button {
     .letters-nav {
         display: none;
     }
+
+    .analogues-products__title {
+        margin-bottom: 10px;
+    }
+
+    .also-buy-card__btn {
+        max-width: 103px;
+        height: 30px;
+        padding: 0px 12px;
+        gap: 14px;
+    }
+
+    .also-buy-card__btn span {
+        font-size: 12px;
+    }
+
+    .also-buy-card__btn svg {
+        width: 14px;
+        height: 14px;
+    }
 }
 
 @media (max-width: 370px) {
@@ -4646,13 +4629,13 @@ button {
 }
 
 .burger-menu-button .icon-cross {
-  display: none; 
+    display: none;
 }
 
 .burger-menu-button.active .icon-burger {
-  display: none; 
+    display: none;
 }
 
 .burger-menu-button.active .icon-cross {
-  display: block; 
+    display: block;
 }
