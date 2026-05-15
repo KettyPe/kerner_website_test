@@ -3998,6 +3998,8 @@ button {
     }
     .mobile-search-container {
         display: block;
+        padding: 10px 0px;
+        margin-bottom: 10px;
     }
     .main-header {
         border-bottom: none;
@@ -4147,10 +4149,6 @@ button {
     }
     .logo {
         max-width: 116px;
-    }
-    .mobile-search-container {
-        padding: 10px 0px;
-        margin-bottom: 10px;
     }
     .mobile-menu {
         top: 60px;
