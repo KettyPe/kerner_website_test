@@ -437,6 +437,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    min-width: 0;
 }
 
 .product-details__right {
@@ -449,6 +450,18 @@
     gap: 10px;
     margin-bottom: 30px;
     overflow-x: auto; /* Для мобилок */
+}
+
+.tabs-nav::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Опционально: скрытие для Firefox и старого IE */
+.tabs-nav {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
 }
 
 .tabs-nav__btn {
@@ -479,13 +492,12 @@
     opacity: 0.7;
 }
 
-
 .tabs-content__item {
-    display: none; 
+    display: none;
 }
 
 .tabs-content__item.active {
-    display: block; 
+    display: block;
     animation: fadeIn 0.3s ease;
 }
 
@@ -497,7 +509,7 @@
     max-width: 850px;
     display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 15px;
 }
 
 .product-description__title {
@@ -606,7 +618,7 @@
     justify-content: space-between;
     align-items: flex-end; /* Текст будет выровнен по нижней линии */
     padding: 5.5px 0;
-    border-bottom: 1px solid #eceeee;
+    border-bottom: 1px dashed #eceeee;
     gap: 15px;
 }
 
@@ -1152,7 +1164,6 @@
     margin-top: 10px;
 }
 
-
 .qa-section {
     display: flex;
     flex-direction: column;
@@ -1182,12 +1193,12 @@
 .qa-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
 }
 
 .qa-card {
     padding: 30px;
-    background: #ECEEEE;
+    background: #eceeee;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -1195,13 +1206,14 @@
 
 .qa-card__question {
     padding-bottom: 20px;
-    border-bottom: 1px solid #DADFE2;
+    border-bottom: 1px solid #dadfe2;
 }
 
 .qa-card__label {
     display: block;
     font-weight: 700;
     font-size: 16px;
+    line-height: 130%;
     color: #272425;
     margin-bottom: 10px;
 }
@@ -1217,7 +1229,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 21px;
 }
 
 .qa-votes {
@@ -1246,13 +1258,13 @@
 
 .qa-card__answer {
     padding-left: 20px;
-    border-left: 2px solid #0CBCF1;
+    border-left: 2px solid #0cbcf1;
 }
 
 /* Кнопка */
-.btn-action {
+.product-details-tabs__btn-action {
     height: 45px;
-    background: #0F385A;
+    background: #0f385a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1265,43 +1277,224 @@
     transition: background 0.2s;
 }
 
-.btn-action:hover {
+.product-details-tabs__btn-action:hover {
     background: #164a75;
 }
 
 /* Пагинация */
-.pagination {
-    display: flex;
-    justify-content: center;
-    gap: 7px;
-    padding-top: 40px;
+
+.qa-section__pagination,
+.reviews-section__pagination {
+    padding-top: 40px !important;
 }
 
-.pagination__btn {
-    width: 40px;
-    height: 40px;
-    background: #ECEEEE;
-    border: none;
+/* Основной контейнер секции */
+.product-details-tabs-reviews,
+.product-details-tabs-reviews__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product-details-tabs-reviews__header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 15px;
-    font-weight: 700;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.product-details-tabs-reviews__title {
     color: #272425;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product-details-tabs-reviews__count {
+    color: #758589;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Карточка отзыва */
+.review-item {
+    background: #eceeee;
+    padding: 30px;
+    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-item__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dadfe2;
+    padding-bottom: 10px;
+}
+
+.review-item__author {
+    color: #272425;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.review-item__rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-item__score {
+    color: #272425;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.review-item__stars {
+    display: flex;
+    gap: 5px;
+}
+
+.review-item__star-icon {
+    width: 16px;
+    display: block;
+}
+
+/* Тело отзыва */
+.review-item__body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-item__group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.review-item__label {
+    color: #272425;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.review-item__text {
+    color: #758589;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+/* Swiper Галерея */
+.review-item__gallery {
+    width: 100%;
+}
+
+.review-item__gallery .swiper-slide {
+    position: relative;
+    padding-bottom: 15.2%;
+}
+.review-item__gallery img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 1px solid white;
+    object-fit: cover;
+}
+
+/* Футер карточки */
+.review-item__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dadfe2;
+    padding-top: 20px;
+}
+
+.review-item__votes {
+    display: flex;
+    gap: 10px;
+}
+
+.vote-btn {
+    background: white;
+    border: none;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #758589;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
 }
 
-.pagination__btn.is-active {
-    background: #0F385A;
-    color: #fff;
+.vote-btn--dislike img {
+    transform: rotate(180deg);
 }
 
-.pagination__btn.is-disabled {
-    opacity: 0.5;
-    cursor: default;
+.review-item__date {
+    color: #758589;
+    font-size: 14px;
+    font-weight: 500;
 }
 
+/* Главная кнопка */
+.product-details-tabs-reviews__submit {
+    height: 45px;
+    background: #0f385a;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
 
+.swiper-dotts.review-item-gallery-dotts {
+    display: flex !important;
+}
+
+.none-content-product-tabs {
+    background-color: #eceeee;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.none-content-product-tabs__icon {
+    flex: 0 0 43px;
+    height: 43px;
+}
+
+.none-content-product-tabs__text-title {
+    font-size: 16px;
+    line-height: 118%;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.none-content-product-tabs__text-desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #758589;
+}
+
+@media (max-width: 1280px) {
+    .product-details__wrapper {
+        padding: 20px 0px;
+    }
+}
 
 @media (max-width: 992px) {
     .analogues-products {
@@ -1338,6 +1531,10 @@
     .also-buy-card__img {
         height: 55%;
     }
+    .review-item__gallery .swiper-slide {
+        padding-bottom: 28%;
+        height: 90px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1357,5 +1554,57 @@
         line-height: 145%;
         max-width: 100%;
     }
+    .tabs-nav__btn {
+        font-size: 12px;
+        height: 40px;
+        padding: 8px 18px;
+    }
+    .product-description__title {
+        font-size: 18px;
+        line-height: 140%;
+        margin-bottom: 15px;
+    }
+    .product-description__subtitle {
+        margin-top: 0px;
+    }
+    .product-specs__title {
+        margin-bottom: 20px;
+    }
+    .spec-item__label,
+    .spec-item__value {
+        font-size: 12px;
+    }
+    #comp .product-specs__title {
+        margin-bottom: 10px;
+    }
+    .product-details-tabs-reviews__header,
+    .qa-section__header {
+        padding-bottom: 0;
+    }
+    .vote-btn {
+        padding: 6px 10px;
+    }
 
+    .review-item__stars {
+        gap: 2px;
+    }
+    .qa-section__pagination,
+    .reviews-section__pagination {
+        padding-top: 0 !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .review-item__date,
+    .qa-card__meta {
+        font-size: 12px;
+    }
+    .review-item,
+    .qa-card {
+        padding: 18px;
+    }
+
+    .qa-votes {
+        gap: 8px;
+    }
 }

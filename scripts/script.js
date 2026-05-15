@@ -518,5 +518,32 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
+    const reviewSwiper = new Swiper('.review-item__gallery', {
+
+        spaceBetween: 8,
+        // freeMode: true,
+        // Навигация и пагинация отключены по дизайну
+
+        pagination: {
+            el: '.review-item-gallery-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+            },
+            370: {
+                slidesPerView: 3,
+            },
+            640: {
+                slidesPerView: 4,
+            },
+            860: {
+                slidesPerView: 5,
+            },
+        }
+    });
 });
 
