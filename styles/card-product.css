@@ -1768,6 +1768,7 @@
     border: 1px solid #c9d1d6;
     flex-direction: column;
     padding: 15px;
+    padding-bottom: 0px;
     z-index: 100;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
@@ -1799,7 +1800,6 @@
     background: #eceeee;
     border: none;
     font-size: 12px;
-    font-family: "Roboto", sans-serif;
     color: #272425;
     outline: none;
 }
@@ -1808,33 +1808,38 @@
     color: #758589;
 }
 
+.info-product-card__search-input:focus + .info-product-card__search-icon {
+    color: #061624;
+}
+
 .info-product-card__search-icon {
     position: absolute;
     right: 15px;
     display: flex;
     pointer-events: none;
+    color: #758589;
+    transition: color 0.3s ease 0s;
 }
 
-/* Область скролла списка */
 .info-product-card__select-scroll-area {
-    max-height: 220px;
+    max-height: 191px;
     overflow-y: auto;
     padding-right: 5px;
-
-    /* Скрытие стандартного скроллбара */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
 }
 
 .info-product-card__select-scroll-area::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    width: 6px;
+}
+
+.info-product-card__select-scroll-area::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    width: 6px;
+    background-color: #eceeee;
+
 }
 
 /* Список элементов */
 .info-product-card__select-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .info-product-card__select-item {
