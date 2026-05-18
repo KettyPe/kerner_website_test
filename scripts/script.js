@@ -303,6 +303,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+    const customSelect = document.querySelector('#customSelect');
+    if (customSelect) {
+        const header = customSelect.querySelector('.info-product-card__select-header');
+        const currentText = customSelect.querySelector('.info-product-card__select-current');
+        const currentStatus = customSelect.querySelector('.info-product-card__select-selected .info-product-card__status');
+        const items = customSelect.querySelectorAll('.info-product-card__select-item');
+
+        // 1. Открытие/Закрытие по клику на шапку
+        header.addEventListener('click', (e) => {
+            e.stopPropagation(); // Чтобы событие не дошло до window
+            customSelect.classList.toggle('info-product-card__custom-select--open');
+        });
+
+        // 2. Логика выбора пункта
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                // Получаем данные из выбранного элемента
+                const itemName = item.querySelector('.info-product-card__item-name').textContent;
+                const itemStatusIsActive = item.querySelector('.info-product-card__status').classList.contains('info-product-card__status--active');
+
+                // Обновляем текст и статус в шапке
+                currentText.textContent = itemName;
+
+                if (itemStatusIsActive) {
+                    currentStatus.classList.add('info-product-card__status--active');
+                } else {
+                    currentStatus.classList.remove('info-product-card__status--active');
+                }
+
+                // Управляем активным классом в списке
+                items.forEach(el => el.classList.remove('info-product-card__select-item--active'));
+                item.classList.add('info-product-card__select-item--active');
+
+                // Закрываем меню после выбора
+                customSelect.classList.remove('info-product-card__custom-select--open');
+            });
+        });
+
+        // 3. Закрытие при клике в любое другое место экрана
+        window.addEventListener('click', () => {
+            if (customSelect.classList.contains('info-product-card__custom-select--open')) {
+                customSelect.classList.remove('info-product-card__custom-select--open');
+            }
+        });
+
+        // Останавливаем закрытие, если кликнули внутри дропдауна (например, по инпуту поиска)
+        customSelect.querySelector('.info-product-card__select-dropdown').addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
+
 
     const lettersSlider = new Swiper('.letters-slider', {
         slidesPerView: 2,
@@ -544,6 +595,68 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 5,
             },
         }
+    });
+
+    new Swiper('.slider-customers-product-card__container', {
+        slidesPerView: 5,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            prevEl: '.customers-product-arrow-prev',
+            nextEl: '.customers-product-arrow-next',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 3,
+                spaceBetween: 8
+            },
+            380: {
+                slidesPerView: 5,
+                spaceBetween: 8
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 10
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 10
+            },
+            1280: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            }
+        }
+    });
+
+    // 1. Инициализация миниатюр
+    const productThumbs = new Swiper('.product-gallery__thumbs-slider', {
+        direction: 'vertical',
+        slidesPerView: 6,
+        spaceBetween: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.product-gallery__arrow--down',
+            prevEl: '.product-gallery__arrow--up',
+        },
+    });
+
+    // 2. Инициализация главного слайдера
+    const productMain = new Swiper('.product-gallery__main-slider', {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: productThumbs,
+        },
+        navigation: {
+            nextEl: '.product-gallery__arrow--down',
+            prevEl: '.product-gallery__arrow--up',
+        },
+        pagination: {
+            el: '.product-gallery-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
     });
 });
 
