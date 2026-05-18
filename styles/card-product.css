@@ -2169,6 +2169,10 @@
     gap: 10px;
 }
 
+.product-gallery__thumbs .product-gallery__arrow.swiper-button-lock {
+    display: none !important;
+}
+
 .product-gallery__thumbs-slider {
     height: 300px; /* Ограничиваем высоту для скролла */
     width: 40px;
@@ -2177,13 +2181,12 @@
 .product-gallery__thumbs-slider .swiper-slide {
     height: 40px !important;
     cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
 }
 
 .product-gallery__thumbs-slider .swiper-slide-thumb-active {
-    opacity: 1;
-    outline: 1px solid #009bc8;
+    border-color: #009bc8;
 }
 
 .product-gallery__thumbs-slider img {

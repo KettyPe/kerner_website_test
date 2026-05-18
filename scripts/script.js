@@ -439,7 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoriesSwiper = new Swiper('.categories-slider', {
         slidesPerView: 2,
         spaceBetween: 10,
-        loop: true,
         navigation: {
             nextEl: '.categories-next',
             prevEl: '.categories-prev',
@@ -629,22 +628,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 1. Инициализация миниатюр
     const productThumbs = new Swiper('.product-gallery__thumbs-slider', {
         direction: 'vertical',
         slidesPerView: 6,
         spaceBetween: 10,
         freeMode: true,
         watchSlidesProgress: true,
+        watchOverflow: true,
+        loop: true,
         navigation: {
             nextEl: '.product-gallery__arrow--down',
             prevEl: '.product-gallery__arrow--up',
         },
     });
 
-    // 2. Инициализация главного слайдера
     const productMain = new Swiper('.product-gallery__main-slider', {
         spaceBetween: 10,
+        watchOverflow: true,
+        loop: true,
         thumbs: {
             swiper: productThumbs,
         },
