@@ -762,25 +762,26 @@
 
 .wholesale-banner {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
     height: 66px;
-    padding: 14px 18px;
-    background: #061624;
-    overflow: hidden;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
 }
 
-/* Контейнер для текста */
+.wholesale-banner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
 .wholesale-banner__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2px;
-    z-index: 3; /* Поверх декоративных свечений */
+    position: relative;
+    z-index: 3;
+    padding: 14.5px 18px;
 }
 
 .wholesale-banner__title {
@@ -797,21 +798,17 @@
     line-height: 1.45;
 }
 
-/* Картинка знака процента */
-.wholesale-banner__img {
+/* .wholesale-banner__img {
     position: absolute;
     width: 112px;
     height: 124px;
-    right: -10px; /* Смещаем по вкусу, основываясь на макете */
+    right: -10px; 
     top: -28px;
     transform: rotate(4deg);
-    z-index: 2; /* Поверх свечений, но под текстом, если они пересекутся */
+    z-index: 2; 
     object-fit: contain;
 }
 
-/* --- ДЕКОРАТИВНЫЕ СВЕЧЕНИЯ И ТЕНИ (из инлайна) --- */
-
-/* Синее нижнее свечение */
 .wholesale-banner::before {
     content: "";
     position: absolute;
@@ -828,7 +825,6 @@
     pointer-events: none;
 }
 
-/* Голубое верхнее свечение */
 .wholesale-banner::after {
     content: "";
     position: absolute;
@@ -843,7 +839,7 @@
     box-shadow: 124px 124px 124px #0cbcf1;
     z-index: 1;
     pointer-events: none;
-}
+} */
 
 .product-buy-card__main {
     padding: 20px;
