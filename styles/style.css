@@ -326,9 +326,6 @@ button {
     justify-content: center;
 }
 
-.contact-item-header {
-}
-
 .contact-item-header__desctop {
     display: flex;
     flex-direction: column;
@@ -1896,9 +1893,6 @@ button {
     padding-top: 0;
 }
 
-.selected-filters {
-}
-
 .selected-filters__list {
     display: flex;
     gap: 10px;
@@ -2588,9 +2582,6 @@ button {
 }
 .social-btn--ig {
     background: linear-gradient(107deg, #feda75 0%, #fa7e1e 26%, #d62976 50%, #962fbf 74%, #4f5bd5 100%);
-}
-
-.footer__btn {
 }
 
 .footer__bottom {
