@@ -422,10 +422,14 @@ button {
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
     gap: 7px;
-    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
+.breadcrumbs__list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 .breadcrumbs__link {
@@ -433,6 +437,7 @@ button {
     color: var(--color-accent);
     text-decoration: none;
     transition: color var(--transition-base);
+    white-space: nowrap;
 }
 
 .breadcrumbs__link:hover {
@@ -449,6 +454,11 @@ button {
     font-size: var(--font-size-xs);
     color: var(--color-gray);
     pointer-events: none;
+    max-width: 500px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
 }
 
 /* Оптимизация для мобилок: скролл, если крошки слишком длинные */
@@ -1497,7 +1507,7 @@ button {
     align-items: center;
     gap: 5px;
     padding: 4px 10px 4px 5px;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 500;
     line-height: 13.05px;
     white-space: nowrap;
@@ -3996,10 +4006,12 @@ button {
     .logo {
         margin-right: auto;
     }
+    .main-header {
+        padding-bottom: 0;
+    }
     .mobile-search-container {
         display: block;
         padding: 10px 0px;
-        margin-bottom: 10px;
     }
     .main-header {
         border-bottom: none;
