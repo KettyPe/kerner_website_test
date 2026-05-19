@@ -92,7 +92,6 @@
     font-size: 14px;
     font-weight: 500;
     color: #272425;
-    font-family: var(--font, "Roboto", sans-serif);
     background: transparent;
 }
 
@@ -478,7 +477,6 @@
     background: #eceeee;
     border: none;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
     font-size: 13px;
     font-weight: 700;
     color: #272425;
@@ -903,6 +901,7 @@
     height: 45px;
     font-weight: 700;
     font-size: 15px;
+    transition: background-color 0.3s ease 0s;
 }
 
 .floating-actions {
@@ -1558,7 +1557,7 @@
     display: inline-flex;
     flex-direction: column;
     gap: 15px;
-    font-family: "Roboto", sans-serif;
+    
     color: #272425;
     max-width: 100%;
 }
@@ -1686,7 +1685,7 @@
     flex-direction: column;
     gap: 15px;
     width: 100%;
-    font-family: "Roboto", sans-serif;
+    
 }
 
 /* Лейбл над селектом */
@@ -2040,7 +2039,7 @@
     padding: 8px 15px;
     border: none;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
+    
     transition: all 0.2s ease;
     box-sizing: border-box;
 }
@@ -2083,10 +2082,10 @@
     justify-content: center;
     width: 20px;
     height: 20px;
-    margin-left: 5px; /* Отступ текста от иконки */
+    margin-left: 6px;
 }
 
-/* Адаптив: если места мало, текст в Видео может скрываться или уменьшаться отступ */
+
 @media (max-width: 360px) {
     .main-slider-produc-card__btn-text {
         font-size: 11px;

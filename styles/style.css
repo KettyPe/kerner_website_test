@@ -1,91 +1,3 @@
-:root {
-    --color-dark-blue: #0f385a;
-    --color-cyan: #0cbcf1;
-    --color-accent: #009bc8;
-    --color-blue-mid: #18578b;
-    --color-blue-deep: #2c506e;
-    --color-primary: #2563eb;
-    --color-dark: #272425;
-    --color-gray: #758589;
-    --color-gray-mid: #b3bbbe;
-    --color-gray-hover: #e1e6e6;
-    --color-gray-light: #c2d0dc;
-    --color-gray-lighter: #c9d1d6;
-    --color-gray-muted: #9faeba;
-    --color-bg: #eceeee;
-    --color-bg-soft: #f2f4f6;
-    --color-bg-lighter: #f8f9fa;
-    --color-bg-warm: #f9fafa;
-    --color-bg-footer-wm: #e5e9ea;
-    --color-social-bg: #d7e7eb;
-    --color-border: #eceeee;
-    --color-border-mid: #d8d8d8;
-    --color-border-soft: #d1d4d4;
-    --color-white: #ffffff;
-    --color-black: #000000;
-    --color-red: #dd333c;
-    --color-green: #0cbc0f;
-    --color-yellow: #ffd400;
-    --color-yellow-dark: #f4a200;
-    --color-dark-blue-10: rgba(15, 56, 90, 0.1);
-    --color-white-20: rgba(255, 255, 255, 0.2);
-    --color-white-60: rgba(255, 255, 255, 0.6);
-    --color-bg-55: rgba(236, 238, 238, 0.55);
-
-    /* --- Layout & Typography --- */
-    --font-main: "Roboto", sans-serif;
-    --font-size-xs: 12px;
-    --section-padding: 80px 0;
-    --container-width: 1330px;
-    --container-padding: 0 20px;
-    --transition-fast: 0.2s ease;
-    --transition-base: 0.3s ease;
-    --border-partners-section: 1px dashed #eceeee;
-}
-
-/* === style.css === */
-
-* {
-    font-family: var(--font-main);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-ul,
-li {
-    list-style: none;
-    line-height: 1;
-}
-
-a {
-    outline: none;
-    text-decoration: none;
-}
-
-body {
-    font-family: var(--font-main);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 14px;
-    line-height: 1.5;
-    color: var(--color-dark);
-    background-color: var(--color-white);
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-button {
-    outline: none;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-family: var(--font);
-}
-
 .button {
     width: 100%;
     height: 60px;
@@ -2864,7 +2776,7 @@ button {
 .info-faq {
     padding: 30px 0;
     background-color: var(--color-white);
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: var(--font-main);
 }
 
 .info-faq__wrapper {
