@@ -4286,10 +4286,16 @@
     .badge-product-card {
         font-size: 8px;
         padding: 2px 5px;
+        padding-left: 22px;
     }
-    .badge-product-card__icon {
+
+    .badge-product-card--hit::before,
+    .badge-product-card--sale::before,
+    .badge-product-card--bonus-blur::before {
         width: 12px;
         height: 12px;
+        left: 4px;
+        top: 2px;
     }
     .product-card__img-wrap {
         height: 185px;

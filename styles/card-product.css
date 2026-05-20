@@ -60,6 +60,18 @@
     font-weight: 500;
     color: #272425;
     line-height: 20.3px;
+    position: relative;
+    padding-left: 27px;
+}
+
+.delivery-payment__list-item::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 0;
+    top: -2px;
+    background: url(../img/icons/check-blue.svg) no-repeat;
 }
 
 .delivery-payment__list-item img {
@@ -865,6 +877,17 @@
     gap: 8px;
     font-size: 14px;
     font-weight: 500;
+    position: relative;
+    padding-left: 25px;
+}
+
+.stock-info__item::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 3px;
 }
 
 .stock-info__item.bonuses {
@@ -872,6 +895,14 @@
 }
 .stock-info__item.in-stock {
     color: #0cbc0f;
+}
+
+.stock-info__item.bonuses::before {
+    background: url(../img/icons/logo-mini.svg) no-repeat;
+}
+
+.stock-info__item.in-stock::before {
+    background: url(../img/icons/check-green.svg) no-repeat;
 }
 
 .product-card-buy-actions {
@@ -2047,9 +2078,8 @@
     background-color: var(--color-accent);
 }
 
-
 .main-slider-produc-card__btn--outline {
-    flex-shrink: 0; 
+    flex-shrink: 0;
     background-color: transparent;
     color: var(--color-dark-blue);
     outline: 1px solid var(--color-dark-blue);
