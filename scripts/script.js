@@ -472,6 +472,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoriesSwiper = new Swiper('.categories-slider', {
         slidesPerView: 2,
         spaceBetween: 10,
+        watchOverflow: true,
         navigation: {
             nextEl: '.categories-next',
             prevEl: '.categories-prev',
