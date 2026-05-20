@@ -264,13 +264,10 @@ document.addEventListener('DOMContentLoaded', () => {
             trigger.addEventListener('click', function () {
                 const tabId = this.getAttribute('data-tab');
 
-                // 1. Убираем активный класс у всех кнопок в этой группе
-                // (Ищем родителя, чтобы не затронуть другие табы на странице)
                 const parent = this.closest('.product-details') || document;
                 parent.querySelectorAll('.js-tab-trigger').forEach(btn => btn.classList.remove('active'));
                 parent.querySelectorAll('.js-tab-content').forEach(content => content.classList.remove('active'));
 
-                // 2. Добавляем активный класс текущей кнопке и контенту
                 this.classList.add('active');
                 document.getElementById(tabId)?.classList.add('active');
             });
@@ -306,20 +303,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentStatus = customSelect.querySelector('.info-product-card__select-selected .info-product-card__status');
         const items = customSelect.querySelectorAll('.info-product-card__select-item');
 
-        // 1. Открытие/Закрытие по клику на шапку
         header.addEventListener('click', (e) => {
-            e.stopPropagation(); // Чтобы событие не дошло до window
+            e.stopPropagation();
             customSelect.classList.toggle('info-product-card__custom-select--open');
         });
 
-        // 2. Логика выбора пункта
         items.forEach(item => {
             item.addEventListener('click', () => {
-                // Получаем данные из выбранного элемента
                 const itemName = item.querySelector('.info-product-card__item-name').textContent;
                 const itemStatusIsActive = item.querySelector('.info-product-card__status').classList.contains('info-product-card__status--active');
 
-                // Обновляем текст и статус в шапке
                 currentText.textContent = itemName;
 
                 if (itemStatusIsActive) {
@@ -328,23 +321,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     currentStatus.classList.remove('info-product-card__status--active');
                 }
 
-                // Управляем активным классом в списке
                 items.forEach(el => el.classList.remove('info-product-card__select-item--active'));
                 item.classList.add('info-product-card__select-item--active');
 
-                // Закрываем меню после выбора
                 customSelect.classList.remove('info-product-card__custom-select--open');
             });
         });
 
-        // 3. Закрытие при клике в любое другое место экрана
         window.addEventListener('click', () => {
             if (customSelect.classList.contains('info-product-card__custom-select--open')) {
                 customSelect.classList.remove('info-product-card__custom-select--open');
             }
         });
 
-        // Останавливаем закрытие, если кликнули внутри дропдауна (например, по инпуту поиска)
         customSelect.querySelector('.info-product-card__select-dropdown').addEventListener('click', (e) => {
             e.stopPropagation();
         });
@@ -357,12 +346,40 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!text) return;
 
             navigator.clipboard.writeText(text).then(() => {
-                // Визуальный фидбек — меняем иконку на галочку на 1.5 сек
                 const svg = btn.querySelector('svg');
                 const original = svg.innerHTML;
                 svg.innerHTML = `<path d="M2 8L6 12L14 4" stroke="#009BC8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`;
                 setTimeout(() => { svg.innerHTML = original; }, 1500);
             });
+        });
+    });
+
+    document.querySelectorAll('.product-card').forEach(card => {
+
+        const btn = card.querySelector('.button--to-cart');
+        const qtyRow = card.querySelector('.qty-add-row');
+        if (!btn || !qtyRow) return;
+
+        const valEl = qtyRow.querySelector('.qty-ctrl__val');
+        const minusBtn = qtyRow.querySelector('.qty-ctrl__btn--minus');
+        const plusBtn = qtyRow.querySelector('.qty-ctrl__btn--plus');
+
+        btn.addEventListener('click', () => {
+            valEl.textContent = '1';
+            card.classList.add('product-card--in-cart');
+        });
+
+        plusBtn.addEventListener('click', () => {
+            valEl.textContent = parseInt(valEl.textContent) + 1;
+        });
+
+        minusBtn.addEventListener('click', () => {
+            const current = parseInt(valEl.textContent);
+            if (current <= 1) {
+                card.classList.remove('product-card--in-cart');
+            } else {
+                valEl.textContent = current - 1;
+            }
         });
     });
 
