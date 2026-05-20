@@ -299,10 +299,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeAttribute('data-position');
     }
 
-    Fancybox.bind("[data-fancybox]", {
-
-    });
-
     const customSelect = document.querySelector('#customSelect');
     if (customSelect) {
         const header = customSelect.querySelector('.info-product-card__select-header');
@@ -353,6 +349,26 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
         });
     }
+
+    document.querySelectorAll('.delivery-payment__copy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.dataset.copy;
+            const text = document.getElementById(targetId)?.textContent?.trim();
+            if (!text) return;
+
+            navigator.clipboard.writeText(text).then(() => {
+                // Визуальный фидбек — меняем иконку на галочку на 1.5 сек
+                const svg = btn.querySelector('svg');
+                const original = svg.innerHTML;
+                svg.innerHTML = `<path d="M2 8L6 12L14 4" stroke="#009BC8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+                setTimeout(() => { svg.innerHTML = original; }, 1500);
+            });
+        });
+    });
+
+    Fancybox.bind("[data-fancybox]", {
+
+    });
 
 
     const lettersSlider = new Swiper('.letters-slider', {
@@ -613,7 +629,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 5,
                 spaceBetween: 8
             },
-            768: {
+            769: {
                 slidesPerView: 3,
                 spaceBetween: 10
             },

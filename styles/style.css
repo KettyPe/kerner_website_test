@@ -39,7 +39,7 @@
 }
 
 .button-blue:hover {
-    background-color: var(--color-blue-mid);
+    background-color: var(--color-accent);
 }
 
 .button:hover svg {
