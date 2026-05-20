@@ -13,6 +13,7 @@
     --color-gray-light: #c2d0dc;
     --color-gray-lighter: #c9d1d6;
     --color-gray-muted: #9faeba;
+    --color-gray-dark: #6b6d74;
     --color-bg: #eceeee;
     --color-bg-soft: #f2f4f6;
     --color-bg-lighter: #f8f9fa;
@@ -28,6 +29,7 @@
     --color-green: #0cbc0f;
     --color-yellow: #ffd400;
     --color-yellow-dark: #f4a200;
+    --color-simple-white: #ffffff;
     --color-dark-blue-10: rgba(15, 56, 90, 0.1);
     --color-white-20: rgba(255, 255, 255, 0.2);
     --color-white-60: rgba(255, 255, 255, 0.6);
