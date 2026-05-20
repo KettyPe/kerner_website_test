@@ -1,7 +1,3 @@
-/* ============================================================
-   DELIVERY & PAYMENT SECTION
-   ============================================================ */
-
 .delivery-payment,
 .analogues-products {
     padding: 70px 0;
@@ -14,7 +10,6 @@
     align-items: stretch;
 }
 
-/* Карточка */
 .delivery-payment__card {
     background-color: #eceeee;
 }
@@ -27,7 +22,6 @@
     gap: 18px;
 }
 
-/* Верх карточки доставки */
 .delivery-payment__top {
     flex: 1;
     display: flex;
@@ -36,7 +30,6 @@
     gap: 19px;
 }
 
-/* Заголовок */
 .delivery-payment__title {
     font-size: 30px;
     font-weight: 600;
@@ -44,7 +37,6 @@
     line-height: 42px;
 }
 
-/* Список пунктов */
 .delivery-payment__list {
     list-style: none;
     display: flex;
@@ -78,7 +70,6 @@
     flex-shrink: 0;
 }
 
-/* Калькулятор доставки */
 .delivery-payment__calc {
     display: flex;
     align-items: flex-end;
@@ -111,7 +102,6 @@
     color: #272425;
 }
 
-/* Низ карточки — лейбл + логотипы ТК */
 .delivery-payment__bottom {
     display: flex;
     flex-direction: column;
@@ -148,7 +138,6 @@
     object-fit: contain;
 }
 
-/* ЭДО блок */
 .delivery-payment__edo {
     padding: 10px;
     background-color: #fff;
@@ -218,7 +207,6 @@
     height: 16px;
 }
 
-/* Частные лица */
 .delivery-payment__private {
     display: flex;
     align-items: center;
@@ -265,92 +253,6 @@
     object-fit: contain;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 1280px) {
-    .delivery-payment__calc {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .delivery-payment__input-wrap {
-        flex: 1 1 auto;
-        width: 100%;
-    }
-    .delivery-payment__btn {
-        width: 100% !important;
-    }
-    .delivery-payment__edo-grid {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .delivery-payment__logos {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 15px;
-        row-gap: 10px;
-    }
-}
-
-@media (max-width: 900px) {
-    .delivery-payment__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .delivery-payment__calc {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .delivery-payment__input-wrap {
-        width: 100%;
-    }
-}
-
-@media (max-width: 540px) {
-    .delivery-payment__edo-grid {
-        flex-direction: column;
-    }
-
-    .delivery-payment__logos {
-        flex-wrap: wrap;
-    }
-
-    .delivery-payment__logo-item {
-        flex: 1 1 calc(50% - 10px);
-    }
-
-    .delivery-payment__top,
-    .delivery-payment__card-inner {
-        gap: 15px;
-    }
-
-    .delivery-payment__edo,
-    .delivery-payment__private {
-        margin-top: 6px;
-    }
-
-    .delivery-payment__card-inner {
-        padding: 20px;
-    }
-
-    .delivery-payment__title {
-        font-size: 22px;
-    }
-
-    .delivery-payment__list-item {
-        align-items: flex-start;
-    }
-
-    .delivery-payment__private {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-/* ============================================================
-   ALSO BUY SECTION
-   ============================================================ */
 .also-buy {
     padding: 70px 0;
     background-color: #fff;
@@ -376,12 +278,10 @@
     line-height: 25.2px;
 }
 
-/* Обёртка слайдера — position: relative для кнопок */
 .also-buy-slider-wrapper {
     position: relative;
 }
 
-/* Карточка */
 .also-buy-card {
     height: 381px;
     padding: 30px;
@@ -393,7 +293,6 @@
     position: relative;
 }
 
-/* Изображение — абсолютное, снизу справа */
 .also-buy-card__img-wrap {
     position: absolute;
     inset: 0;
@@ -415,7 +314,6 @@
     height: 65%;
 }
 
-/* Название поверх картинки */
 .also-buy-card__title {
     font-size: 23px;
     font-weight: 600;
@@ -426,16 +324,11 @@
     max-width: 95%;
 }
 
-/* Кнопка */
 .also-buy-card__btn {
     position: relative;
     z-index: 1;
     max-width: 147px;
 }
-
-/* ============================================================
-   PRODUCT INFO — общая обёртка
-   ============================================================ */
 
 .product-details__wrapper {
     display: flex;
@@ -463,12 +356,11 @@
     padding-top: 16px;
 }
 
-/* Навигация */
 .tabs-nav {
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
-    overflow-x: auto; /* Для мобилок */
+    overflow-x: auto;
 }
 
 .tabs-nav::-webkit-scrollbar {
@@ -477,10 +369,9 @@
     height: 0;
 }
 
-/* Опционально: скрытие для Firefox и старого IE */
 .tabs-nav {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .tabs-nav__btn {
@@ -563,7 +454,6 @@
     padding-left: 15px;
 }
 
-/* Маркер списка (опционально, если по дизайну нужны точки) */
 .product-description__features li::before {
     content: "•";
     position: absolute;
@@ -683,7 +573,6 @@
     gap: 10px;
 }
 
-/* Карточка документа */
 .doc-card {
     display: flex;
     align-items: center;
@@ -693,10 +582,9 @@
 }
 
 .doc-card:hover .doc-card__name {
-    color: var(--color-dark-blue); /* Подсветка при наведении */
+    color: var(--color-dark-blue);
 }
 
-/* Иконка в синем квадрате */
 .doc-card__icon {
     width: 50px;
     height: 50px;
@@ -712,7 +600,6 @@
     height: 24px;
 }
 
-/* Информация о файле */
 .doc-card__info {
     display: flex;
     flex-direction: column;
@@ -733,13 +620,6 @@
     font-weight: 500;
 }
 
-/* Опционально: иконка стрелочки справа, если нужна как в исходном коде */
-.doc-card::after {
-    /* content: url('path/to/arrow.svg'); */
-    /* width: 20px; height: 20px; */
-    /* margin-left: auto; */
-}
-
 .product-sidebar {
     display: flex;
     flex-direction: column;
@@ -748,7 +628,6 @@
     max-width: 410px;
 }
 
-/* 1. Блок покупки */
 .product-buy-card {
     background-color: rgba(236, 238, 238, 0.71);
 }
@@ -939,7 +818,6 @@
     color: var(--color-accent);
 }
 
-/* 2. Преимущества */
 .product-benefits {
     padding: 0 20px;
     display: flex;
@@ -964,7 +842,6 @@
     text-decoration: underline;
 }
 
-/* 3. Мини-карточка менеджера */
 .manager-card-mini {
     position: relative;
     border: 1px solid #eceeee;
@@ -1053,7 +930,8 @@
 
 .social-btn--wa {
     background-color: #9faeba;
-} /* По дизайну из кода серый с градиентом */
+}
+
 .social-btn--tg {
     background-color: #0cbcf1;
 }
@@ -1065,7 +943,6 @@
     gap: 15px;
 }
 
-/* Заголовок */
 .product-info__title {
     color: #272425;
     font-size: 18px;
@@ -1073,7 +950,6 @@
     line-height: 26.1px;
 }
 
-/* Мета (SKU + Rating) */
 .product-info__meta {
     display: flex;
     justify-content: space-between;
@@ -1108,7 +984,6 @@
     border-bottom: 1px dashed #758589;
 }
 
-/* Бренд */
 .product-brand {
     display: flex;
     align-items: center;
@@ -1131,7 +1006,6 @@
     text-decoration: underline;
 }
 
-/* Универсальные поля выбора */
 .ui-field {
     display: flex;
     flex-direction: column;
@@ -1144,7 +1018,6 @@
     font-weight: 500;
 }
 
-/* UI: Дропдаун */
 .ui-select {
     position: relative;
     width: 100%;
@@ -1180,7 +1053,6 @@
     background-color: url("img/icons/chevron.svg") no-repeat center;
 }
 
-/* UI: Чипсы */
 .ui-chips {
     display: flex;
     flex-wrap: wrap;
@@ -1204,7 +1076,6 @@
     border-color: var(--color-dark-blue);
 }
 
-/* Краткие характеристики */
 .product-preview-specs {
     padding-top: 18px;
 }
@@ -1350,7 +1221,6 @@
     border-left: 2px solid #0cbcf1;
 }
 
-/* Кнопка */
 .product-details-tabs__btn-action {
     height: 45px;
     background-color: var(--color-dark-blue);
@@ -1370,14 +1240,11 @@
     background-color: #164a75;
 }
 
-/* Пагинация */
-
 .qa-section__pagination,
 .reviews-section__pagination {
     padding-top: 40px !important;
 }
 
-/* Основной контейнер секции */
 .product-details-tabs-reviews,
 .product-details-tabs-reviews__list {
     display: flex;
@@ -1404,7 +1271,6 @@
     font-weight: 500;
 }
 
-/* Карточка отзыва */
 .review-item {
     background-color: #eceeee;
     padding: 30px;
@@ -1449,7 +1315,6 @@
     width: 16px;
 }
 
-/* Тело отзыва */
 .review-item__body {
     display: flex;
     flex-direction: column;
@@ -1476,7 +1341,6 @@
     line-height: 1.3;
 }
 
-/* Swiper Галерея */
 .review-item__gallery {
     width: 100%;
 }
@@ -1495,7 +1359,6 @@
     object-fit: cover;
 }
 
-/* Футер карточки */
 .review-item__footer {
     display: flex;
     justify-content: space-between;
@@ -1532,7 +1395,6 @@
     font-weight: 500;
 }
 
-/* Главная кнопка */
 .product-details-tabs-reviews__submit {
     height: 45px;
     background-color: var(--color-dark-blue);
@@ -1704,8 +1566,6 @@
     margin-right: 8px;
 } */
 
-/* Контейнер */
-/* Контейнер всей секции выбора */
 .info-product-card__select-container {
     display: flex;
     flex-direction: column;
@@ -1713,7 +1573,6 @@
     width: 100%;
 }
 
-/* Лейбл над селектом */
 .info-product-card__option-label {
     color: #6b6d74;
     font-size: 14px;
@@ -1721,14 +1580,12 @@
     line-height: 1.2;
 }
 
-/* Основной блок кастомного селекта */
 .info-product-card__custom-select {
     position: relative;
     width: 100%;
     user-select: none;
 }
 
-/* Шапка селекта (кнопка открытия) */
 .info-product-card__select-header {
     height: 35px;
     padding: 0 14px 0 5px;
@@ -1745,7 +1602,6 @@
     border-color: #758589;
 }
 
-/* Выбранное значение и точка статуса */
 .info-product-card__select-selected {
     display: flex;
     align-items: center;
@@ -1758,11 +1614,11 @@
     height: 8px;
     flex-shrink: 0;
     background-color: #9faeba;
-    border-radius: 50%; /* По умолчанию серый */
+    border-radius: 50%;
 }
 
 .info-product-card__status--active {
-    background-color: #0cbc0f; /* Зеленый при наличии */
+    background-color: #0cbc0f;
 }
 
 .info-product-card__select-current {
@@ -1774,16 +1630,14 @@
     text-overflow: ellipsis;
 }
 
-/* Иконка стрелки */
 .info-product-card__select-arrow {
     display: flex;
     align-items: center;
     transition: transform 0.3s ease;
 }
 
-/* Выпадающее меню */
 .info-product-card__select-dropdown {
-    display: none; /* Скрыто по умолчанию */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -1797,7 +1651,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Состояние при открытии (через JS класс) */
 .info-product-card__custom-select--open .info-product-card__select-dropdown {
     display: flex;
 }
@@ -1806,7 +1659,6 @@
     transform: rotate(180deg);
 }
 
-/* Поиск внутри дропдауна */
 .info-product-card__select-search {
     margin-bottom: 10px;
 }
@@ -1861,10 +1713,6 @@
     background-color: #eceeee;
 }
 
-/* Список элементов */
-.info-product-card__select-list {
-}
-
 .info-product-card__select-item {
     display: flex;
     justify-content: space-between;
@@ -1883,7 +1731,6 @@
     background-color: #f9fafa;
 }
 
-/* Контент внутри пункта списка */
 .info-product-card__item-info {
     display: flex;
     align-items: center;
@@ -1903,8 +1750,6 @@
     white-space: nowrap;
 }
 
-/* select end */
-
 .info-product-card__options {
     display: flex;
     flex-direction: column;
@@ -1918,20 +1763,17 @@
     margin-bottom: 12px;
 }
 
-/* Контейнер для группы тегов */
 .info-product-card__tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-/* Обертка-label теперь работает как кнопка */
 .info-product-card__tag {
     cursor: pointer;
     display: block;
 }
 
-/* Скрываем реальный input, но оставляем его доступным для фокуса и систем */
 .info-product-card__tag-input {
     position: absolute;
     width: 1px;
@@ -1945,7 +1787,6 @@
     overflow: hidden;
 }
 
-/* Визуальный стиль "кнопки" */
 .info-product-card__tag-text {
     display: flex;
     align-items: center;
@@ -1960,19 +1801,16 @@
     user-select: none;
 }
 
-/* Состояние: Наведение */
 .info-product-card__tag:hover .info-product-card__tag-text {
     background-color: #f5f7f8;
 }
 
-/* Состояние: ВЫБРАНО (Checked) */
 .info-product-card__tag-input:checked + .info-product-card__tag-text {
     background-color: var(--color-dark-blue);
     color: #fff;
     outline: 1px solid var(--color-dark-blue);
 }
 
-/* Состояние: Фокус для доступности (клавиатура) */
 .info-product-card__tag-input:focus-visible + .info-product-card__tag-text {
     outline: 2px solid #009bc8;
     outline-offset: 2px;
@@ -2153,20 +1991,19 @@
     border-radius: 2px;
 }
 
-/* Стилизация стрелки навигации */
 .slider-customers-product-card__next {
     width: 56px;
     height: 56px;
     background-color: #ffffff;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    right: -28px; /* Смещение на половину ширины кнопки */
+    right: -28px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .slider-customers-product-card__next::after {
-    display: none; /* Убираем стандартную иконку swiper */
+    display: none;
 }
 
 .slider-customers-product-card__next svg {
@@ -2181,7 +2018,6 @@
     background-color: #fff;
 }
 
-/* Стили колонки превью */
 .product-gallery__thumbs {
     display: flex;
     flex-direction: column;
@@ -2195,7 +2031,7 @@
 }
 
 .product-gallery__thumbs-slider {
-    height: 300px; /* Ограничиваем высоту для скролла */
+    height: 300px;
     width: 40px;
 }
 
@@ -2225,7 +2061,6 @@
     padding: 5px 0;
 }
 
-/* Основное фото */
 .product-gallery__main-slider {
     flex: 1;
     height: 360px;
@@ -2248,7 +2083,6 @@
     gap: 10px;
 }
 
-/* Бейджи из предыдущих этапов */
 .product-label {
     display: flex;
     align-items: center;
@@ -2273,6 +2107,27 @@
     }
     .product-details__main-slider {
         flex: 0 0 360px;
+    }
+    .delivery-payment__calc {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .delivery-payment__input-wrap {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+    .delivery-payment__btn {
+        width: 100% !important;
+    }
+    .delivery-payment__edo-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .delivery-payment__logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 10px;
     }
 }
 
@@ -2319,6 +2174,21 @@
     }
     .product-details__main-slider {
         flex: 0 0 320px;
+    }
+}
+
+@media (max-width: 900px) {
+    .delivery-payment__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .delivery-payment__calc {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .delivery-payment__input-wrap {
+        width: 100%;
     }
 }
 
@@ -2450,6 +2320,47 @@
     }
 }
 
+@media (max-width: 540px) {
+    .delivery-payment__edo-grid {
+        flex-direction: column;
+    }
+
+    .delivery-payment__logos {
+        flex-wrap: wrap;
+    }
+
+    .delivery-payment__logo-item {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .delivery-payment__top,
+    .delivery-payment__card-inner {
+        gap: 15px;
+    }
+
+    .delivery-payment__edo,
+    .delivery-payment__private {
+        margin-top: 6px;
+    }
+
+    .delivery-payment__card-inner {
+        padding: 20px;
+    }
+
+    .delivery-payment__title {
+        font-size: 22px;
+    }
+
+    .delivery-payment__list-item {
+        align-items: flex-start;
+    }
+
+    .delivery-payment__private {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 @media (max-width: 360px) {
     .review-item__date,
     .qa-card__meta {
@@ -2464,3 +2375,6 @@
         gap: 8px;
     }
 }
+
+
+
