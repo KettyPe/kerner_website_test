@@ -1415,33 +1415,66 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    padding: 4px 10px 4px 5px;
+    padding: 4px 10px 4px 24px;
     font-size: 10px;
     font-weight: 500;
     line-height: 13.05px;
     white-space: nowrap;
     width: max-content;
+    position: relative;
 }
 
-.badge-product-card__icon {
+/* .badge-product-card__icon {
     width: 14px;
     height: 14px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .badge-product-card--sale {
     background-color: var(--color-cyan);
     color: var(--color-white);
 }
+
 .badge-product-card--hit {
-    background: var(--color-red);
+    background-color: var(--color-red);
     color: var(--color-white);
 }
+
+.badge-product-card--hit::before,
+.badge-product-card--sale::before,
+.badge-product-card--bonus-blur::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 5px;
+    top: 3px;
+}
+
+.badge-product-card--bonus-blur {
+    background-color: var(--color-bg-55);
+    backdrop-filter: blur(2.9px);
+    color: var(--color-dark-blue);
+}
+
+.badge-product-card--hit::before {
+    background: url(../img/icons/flash.svg) no-repeat;
+}
+
+.badge-product-card--sale::before {
+    background: url(../img/icons/sale.svg) no-repeat;
+}
+
+.badge-product-card--bonus-blur::before {
+    background: url(../img/icons/logo-mini.svg) no-repeat;
+    /* background-repeat: no-repeat; */
+}
+
 .badge-product-card--order {
-    background: var(--color-yellow);
+    background-color: var(--color-yellow);
     color: var(--color-dark);
 }
 
@@ -1854,12 +1887,6 @@
     flex-direction: column;
 }
 
-.badge-product-card--bonus-blur {
-    background: var(--color-bg-55);
-    backdrop-filter: blur(2.9px);
-    color: var(--color-dark-blue);
-}
-
 /* Правая колонка в фото: сердечко + аналитика */
 .product-card__img-actions {
     display: flex;
@@ -1870,12 +1897,23 @@
 }
 
 .status-text-pc {
-    display: inline-flex;
+    /* display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 5px; */
     font-size: 11px;
     font-weight: 500;
     line-height: 15.95px;
+    position: relative;
+    padding-left: 21px;
+}
+
+.status-text-pc::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: -1px;
 }
 
 .status-text-pc--instock {
@@ -1895,6 +1933,18 @@
 
 .product-card__price--muted {
     color: var(--color-gray);
+}
+
+.status-text-pc--instock::before {
+    background: url(../img/icons/check-green.svg) no-repeat;
+}
+
+.status-text-pc--expecting::before {
+    background: url(../img/icons/expecting.svg) no-repeat;
+}
+
+.status-text-pc--clarify::before {
+    background: url(../img/icons/delivery-orange.svg) no-repeat;
 }
 
 /* В режиме СЕТКИ: meta-specs не создаёт лишний блок */
