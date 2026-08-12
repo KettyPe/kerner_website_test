@@ -641,6 +641,11 @@
     background-color: var(--color-border);
 }
 
+.swiper-dotts.swiper-dotts--white .swiper-pagination-bullet {
+    backdrop-filter: blur(20.200002670288086px);
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
 .swiper-dotts .swiper-pagination-bullet::before {
     content: "";
     position: absolute;
@@ -652,12 +657,20 @@
     transition: width 0.4s ease-in-out;
 }
 
+.swiper-dotts.swiper-dotts--white .swiper-pagination-bullet::before {
+    background-color: #fff;
+}
+
 .swiper-dotts .swiper-pagination-bullet-active::before {
     width: 100%;
 }
 
 .swiper-dotts .swiper-pagination-bullet-active {
     background-color: var(--color-white);
+}
+
+.swiper-dotts.swiper-dotts--white .swiper-pagination-bullet-active {
+    background-color: #fff;
 }
 
 .burger-menu-button,
@@ -2569,14 +2582,11 @@
 .help-wrapper::before {
     content: "";
     position: absolute;
-    width: 366px;
-    height: 366px;
-    left: -121px;
-    top: 122px;
-    background: var(--color-cyan);
-    filter: blur(210px);
-    opacity: 0.2;
-    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(../img/main-page/logo-help-section.svg) no-repeat;
 }
 
 .help-info {
@@ -2754,6 +2764,7 @@
 
 .custom-checkbox {
     display: flex;
+    align-items: center;
     gap: 15px;
     cursor: pointer;
 }
@@ -3714,6 +3725,10 @@
     .partners-section__subtitle {
         margin-top: 4px;
     }
+
+    .help-wrapper::before {
+        display: none;
+    }
 }
 
 @media (max-width: 992px) {
@@ -4421,10 +4436,6 @@
         font-size: 13px;
         gap: 15px;
         height: 50px;
-    }
-
-    .custom-checkbox {
-        align-items: center;
     }
     .seo-content__mini-section:nth-child(1) {
         margin-top: 20px;

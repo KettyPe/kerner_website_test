@@ -1,0 +1,2460 @@
+.business-section {
+     padding-block: 70px;
+     background-color: #ffffff;
+}
+
+.business-section__inner {
+     display: flex;
+     gap: 20px;
+     align-items: stretch;
+}
+
+/* --- Главная темная карточка --- */
+.business-section__main-card {
+     flex: 0.94;
+     background-color: #192631;
+     padding: 20px;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     min-height: 278px;
+}
+
+/* Синее свечение под каской */
+.business-section__glow {
+     position: absolute;
+     width: 200px;
+     height: 200px;
+     right: 20px;
+     bottom: -50px;
+     background: #0cbcf1;
+     filter: blur(120px);
+     border-radius: 50%;
+     pointer-events: none;
+}
+
+/* Картинка каски (уменьшен размер) */
+.business-section__helmet-img {
+     position: absolute;
+     right: 2px;
+     top: 50%;
+     transform: translateY(-50%);
+     max-width: 286px;
+     width: 100%;
+     height: auto;
+     object-fit: contain;
+     z-index: 2;
+     pointer-events: none;
+}
+
+.business-section__content {
+     position: relative;
+     z-index: 3;
+     max-width: 379px;
+     margin-top: -30px;
+}
+
+.business-section__title {
+     color: #ffffff;
+     margin-bottom: 20px;
+}
+
+.business-section__tags {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 15px;
+}
+
+/* Сокращенная ширина элементов (плашек) */
+.business-section__tag {
+     display: inline-block;
+     width: fit-content;
+     padding: 3px 11px;
+     background-color: rgba(255, 255, 255, 0.08);
+     color: #ffffff;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+     white-space: nowrap;
+}
+
+/* --- Правый блок из двух карточек --- */
+.business-section__side-cards {
+     flex: 1;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+}
+
+.business-section__side-card {
+     background-color: #eceeee;
+     padding: 25px 20px;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+/* Декоративные SVG-иконки в фоне карточек */
+.business-section__side-decor {
+     position: absolute;
+     right: -15px;
+     bottom: -15px;
+     width: 237px;
+     height: 220px;
+     object-fit: contain;
+     pointer-events: none;
+     opacity: 0.8;
+}
+
+.business-section__side-title {
+     font-size: 24px;
+     font-weight: 700;
+     line-height: 1.2;
+     color: var(--color-dark);
+     position: relative;
+     z-index: 2;
+}
+
+.business-section__list {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     position: relative;
+     z-index: 2;
+}
+
+.business-section__list-item {
+     font-size: 18px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: var(--color-dark);
+     display: flex;
+     align-items: center;
+     gap: 8px;
+}
+
+/* Маркер dott через ::before */
+.business-section__list-item::before {
+     content: "";
+     display: inline-block;
+     width: 16px;
+     height: 16px;
+     flex-shrink: 0;
+     background-image: url(../img/main-page/business-section/dott.svg);
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center;
+}
+
+.expert-main-pg {
+     padding-block: 70px;
+}
+
+.media-section {
+     padding-block: 70px;
+     background-color: #ffffff;
+}
+
+.media-section__inner {
+     display: flex;
+     gap: 40px;
+     align-items: flex-start;
+}
+
+/* Левая колонка */
+.media-section__info {
+     flex: 0 1 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 10px;
+}
+
+.media-section__badge {
+     display: inline-block;
+     padding: 5px 10px;
+     background-color: #0f385a;
+     color: #ffffff;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.3;
+}
+
+.media-section__description {
+     font-size: 22px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: #758589;
+     margin: 0;
+}
+
+/* Правая колонка */
+.media-section__content {
+     flex: 0 0 635px;
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+}
+
+.media-section__list {
+     display: flex;
+     flex-direction: column;
+}
+
+.media-section__item {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     padding: 15px 0;
+     border-bottom: 1px solid #eceeee;
+     text-decoration: none;
+     transition: background-color 0.2s ease;
+}
+
+.media-section__logo-wrapper {
+     width: 130px;
+     height: 100px;
+     flex-shrink: 0;
+     background-color: #eceeee;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 15px;
+}
+
+.media-section__logo {
+     max-width: 100%;
+     max-height: 100%;
+     object-fit: contain;
+}
+
+.media-section__item-content {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+}
+
+.media-section__category {
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 1.3;
+     color: #758589;
+}
+
+.media-section__item-title {
+     font-size: 18px;
+     font-weight: 500;
+     line-height: 1.3;
+     color: #272425;
+     margin: 0;
+     transition: color 0.2s ease;
+}
+
+.media-section__item:hover .media-section__item-title {
+     color: #0f385a;
+}
+
+/* Круглая кнопка со стрелкой */
+.media-section__arrow-btn {
+     width: 45px;
+     height: 45px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: transform 0.3s ease 0s;
+}
+
+.media-section__arrow-btn img {
+     width: 24px;
+     height: 24px;
+}
+
+.media-section__item:hover .media-section__arrow-btn {
+     transform: translateX(4px);
+}
+
+/* Подвал списка */
+.media-section__footer {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-top: 28px;
+     gap: 20px;
+}
+
+.media-section__count {
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 1.3;
+     color: #758589;
+}
+
+.media-section__link {
+     font-size: 14px;
+     font-weight: 600;
+     line-height: 1.3;
+     color: #0f385a;
+     text-decoration: none;
+     padding-bottom: 3px;
+     border-bottom: 1px solid #0f385a;
+     transition: opacity 0.2s ease;
+}
+
+.media-section__link:hover {
+     opacity: 0.8;
+}
+
+.reviews-main-pg {
+     background-color: #192631;
+     padding: 50px 0 90px;
+}
+
+.reviews-main-pg__header {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+     gap: 30px;
+}
+
+.reviews-main-pg__header-info {
+     max-width: 700px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.reviews-main-pg__title {
+     color: #ffffff;
+}
+
+.reviews-main-pg__subtitle {
+     margin: 0;
+     color: #c2d0dc;
+     font-size: 18px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.reviews-main-pg__link-all {
+     color: #ffffff;
+     font-size: 15px;
+     font-weight: 500;
+     text-decoration: none;
+     border-bottom: 1px solid #ffffff;
+     padding-bottom: 1px;
+     white-space: nowrap;
+     transition: opacity 0.2s ease;
+}
+
+.reviews-main-pg__link-all:hover {
+     opacity: 0.7;
+}
+
+.reviews-main-pg__slider-wrapper {
+     position: relative;
+     padding: 30px 0;
+}
+
+.reviews-main-pg__arrow {
+     position: absolute;
+     top: 237px;
+     transform: translateY(-50%);
+     z-index: 10;
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     background: #ffffff;
+     box-shadow: 0px 5px 19.7px rgba(15, 56, 90, 0.12);
+     backdrop-filter: blur(10px);
+     border: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     transition:
+          opacity 0.2s ease,
+          background-color 0.2s ease;
+}
+
+.reviews-main-pg__arrow:hover {
+     background: #f5f5f5;
+}
+
+.reviews-main-pg__arrow.swiper-button-disabled {
+     opacity: 0.4;
+     cursor: not-allowed;
+}
+
+.reviews-main-pg__slider-nav {
+     top: 44%;
+}
+
+.reviews-main-pg__card {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+
+.reviews-main-pg__card-image-box {
+     padding: 12px;
+     background-color: #ffffff;
+}
+
+.reviews-main-pg__card-image {
+     position: relative;
+     padding-bottom: 138%;
+}
+
+.reviews-main-pg__card-img {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+     object-fit: cover;
+}
+
+.reviews-main-pg__card-info {
+     display: flex;
+     flex-direction: column;
+     gap: 1px;
+}
+
+.reviews-main-pg__card-author {
+     color: #ffffff;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.reviews-main-pg__card-company {
+     color: rgba(255, 255, 255, 0.53);
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.partners-main-pg {
+     width: 100%;
+     background: linear-gradient(180deg, #ffffff 50%, #192631 50%);
+     padding-block: 50px;
+}
+
+.partners-main-pg__card {
+     position: relative;
+     background: #ffffff;
+     box-shadow: 0px 0px 26.2px rgba(39, 36, 37, 0.11);
+     padding: 24px 38px;
+     overflow: hidden;
+}
+
+/* Градиентное размытие по краям поверх слайдера */
+.partners-main-pg__card::before,
+.partners-main-pg__card::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     width: 15%;
+     max-width: 150px;
+     z-index: 5;
+     pointer-events: none;
+}
+
+.partners-main-pg__card::before {
+     left: 0;
+     background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.partners-main-pg__card::after {
+     right: 0;
+     background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.partners-main-pg__slider {
+     width: 100%;
+}
+
+.partners-main-pg__item {
+     width: 100%;
+     height: 80px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-left: 1px solid #eceeee;
+     box-sizing: border-box;
+     padding: 0 10px;
+}
+
+.partners-main-pg__logo {
+     max-width: 100%;
+     max-height: 100%;
+     object-fit: contain;
+}
+
+.hero-main-pg {
+     padding-top: 20px;
+}
+
+.hero-main-pg__layout {
+     display: flex;
+     gap: 20px;
+}
+
+/* === Левый блок: Swiper Слайдер === */
+.hero-main-pg__slider {
+     flex: 0 1 800px;
+     position: relative;
+     min-height: 450px;
+}
+
+.hero-main-pg__slide {
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+}
+
+.hero-main-pg__banner-img {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+}
+
+.hero-main-pg__banner-img img {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+     object-fit: cover;
+     object-position: left;
+}
+
+/* Навигация слайдера */
+.hero-main-pg__nav {
+     position: absolute;
+     bottom: 30px;
+     left: 40px;
+     z-index: 10;
+     display: flex;
+     gap: 15px;
+}
+
+.hero-main-pg__arrow {
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.07);
+     backdrop-filter: blur(10px);
+     border: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: var(--color-white);
+     cursor: pointer;
+     box-shadow: 0px 5px 20px rgba(15, 56, 90, 0.12);
+     transition: background-color var(--transition-fast);
+}
+
+.hero-main-pg__arrow:hover {
+     background: rgba(255, 255, 255, 0.2);
+}
+
+/* === Правый блок: Баннеры === */
+.hero-main-pg__aside {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     min-width: 0;
+}
+
+.hero-main-pg__card {
+     flex: 1;
+     padding: 20px;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     justify-content: space-between;
+}
+
+.hero-main-pg__card--wholesale {
+     background-color: var(--color-cyan);
+}
+
+.hero-main-pg__card--about {
+     background-color: var(--color-dark);
+}
+
+.hero-main-pg__card-content {
+     width: 240px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     position: relative;
+     z-index: 2;
+}
+
+.hero-main-pg__card-title {
+     font-size: 23px;
+     font-weight: 600;
+     line-height: 1.2;
+     color: var(--color-white);
+     margin-bottom: 5px;
+}
+
+.hero-main-pg__card-text {
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-main-pg__card-link {
+     font-size: 15px;
+     font-weight: 500;
+     color: var(--color-white);
+     text-decoration: none;
+     border-bottom: 1px solid var(--color-white);
+     padding-bottom: 2px;
+     transition: opacity var(--transition-fast);
+     margin-top: auto;
+}
+
+.hero-main-pg__card-link:hover {
+     opacity: 0.8;
+}
+
+/* Фоновые изображения для обоих баннеров */
+.hero-main-pg__card-img {
+     position: absolute;
+     right: 0;
+     top: 0;
+     height: 100%;
+     object-fit: contain;
+     pointer-events: none;
+     z-index: 1;
+}
+
+/* Статистика для баннера Оборудование */
+.hero-main-pg__stats {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding-left: 30px;
+     position: relative;
+     z-index: 2;
+}
+
+.hero-main-pg__stat-item {
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+}
+
+.hero-main-pg__stat-num {
+     font-size: 40px;
+     font-weight: 700;
+     line-height: 1;
+     color: var(--color-white);
+}
+
+.hero-main-pg__stat-desc {
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: rgba(255, 255, 255, 0.7);
+}
+
+.categories-main-pg {
+     padding-block: 90px;
+}
+
+.categories-main-pg__header {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+     margin-bottom: 20px;
+}
+
+.categories-main-pg__all-link {
+     font-size: 15px;
+     font-weight: 500;
+     color: var(--color-dark);
+     text-decoration: none;
+     border-bottom: 1px solid var(--color-dark);
+     padding-bottom: 1px;
+     transition: opacity var(--transition-fast);
+}
+
+.categories-main-pg__all-link:hover {
+     opacity: 0.7;
+}
+
+.categories-main-pg__grid {
+     display: flex;
+     gap: 20px;
+}
+
+/* Общий класс карточки */
+.categories-main-pg__card {
+     background-color: var(--color-bg);
+     padding: 20px;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     text-decoration: none;
+     transition: background-color var(--transition-fast);
+}
+
+.categories-main-pg__card:hover {
+     background-color: var(--color-border-mid);
+}
+
+/* Главная большая карточка слева */
+.categories-main-pg__card--featured {
+     width: 344px;
+     height: 380px;
+     flex-shrink: 0;
+}
+
+/* Сетка маленьких карточек справа */
+.categories-main-pg__subgrid {
+     flex: 1;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(2, 180px);
+     gap: 20px;
+     min-width: 0;
+}
+
+.categories-main-pg__card-info {
+     width: 150px;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: flex-start;
+     position: relative;
+     z-index: 2;
+}
+
+.categories-main-pg__card--featured .categories-main-pg__card-info {
+     width: 183px;
+}
+
+.categories-main-pg__card-title {
+     font-size: 18px;
+     font-weight: 600;
+     line-height: 1.2;
+     color: var(--color-dark);
+}
+
+.categories-main-pg__card-count {
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: var(--color-gray-dark);
+}
+
+.categories-main-pg__card-img {
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     max-height: 82%;
+     max-width: 60%;
+     object-fit: contain;
+     pointer-events: none;
+     z-index: 1;
+     mix-blend-mode: darken;
+}
+
+.categories-main-pg__card--featured .categories-main-pg__card-img {
+     max-height: 92%;
+}
+
+/* ============================================================== */
+
+.advantages-main-pg {
+     background-color: #ffffff;
+     padding-block: 90px;
+}
+
+.advantages-main-pg__header {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+     gap: 40px;
+     margin-bottom: 35px;
+}
+
+.advantages-main-pg__title {
+     width: 660px;
+     max-width: 100%;
+     color: #272425;
+     font-size: 30px;
+     font-weight: 600;
+     line-height: 1.4;
+}
+
+.advantages-main-pg__subtitle {
+     flex: 1;
+     color: #758589;
+     font-size: 22px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.advantages-main-pg__grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 20px;
+     height: 650px;
+}
+
+.advantages-main-pg__column {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     height: 100%;
+}
+
+.advantages-main-pg__card {
+     position: relative;
+     overflow: hidden;
+     box-sizing: border-box;
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+}
+
+.advantages-main-pg__card--tall {
+     height: 100%;
+     justify-content: space-between;
+}
+
+.advantages-main-pg__card-bg {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: 1;
+}
+
+.advantages-main-pg__card-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.59) 0%,
+          rgba(0, 0, 0, 0) 36%,
+          rgba(0, 0, 0, 0.15) 73%,
+          rgba(0, 0, 0, 0.59) 100%
+     );
+     z-index: 2;
+}
+
+.advantages-main-pg__card--tall .advantages-main-pg__card-content {
+     position: relative;
+     z-index: 3;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.advantages-main-pg__card--tall .advantages-main-pg__card-title {
+     color: #ffffff;
+     font-size: 27px;
+     line-height: 1.2;
+}
+
+.advantages-main-pg__card--tall .advantages-main-pg__card-text {
+     color: rgba(255, 255, 255, 0.81);
+     font-size: 18px;
+     line-height: 1.4;
+}
+
+.advantages-main-pg__card--dark {
+     background-color: #272425;
+     flex: 1;
+     justify-content: space-between;
+}
+
+.advantages-main-pg__card-glow {
+     position: absolute;
+     top: -50px;
+     left: -50px;
+     width: 240px;
+     height: 240px;
+     background: #ffffff;
+     border-radius: 50%;
+     filter: blur(90px);
+     opacity: 0.15;
+     pointer-events: none;
+}
+
+.advantages-main-pg__card--dark .advantages-main-pg__card-title {
+     color: #ffffff;
+     font-size: 22px;
+     line-height: 1.2;
+     margin-bottom: 5px;
+}
+
+.advantages-main-pg__card--dark .advantages-main-pg__card-text {
+     color: #9faeba;
+     font-size: 16px;
+     line-height: 1.4;
+}
+
+.advantages-main-pg__card--light {
+     background-color: #eceeee;
+     flex: 1;
+     justify-content: space-between;
+}
+
+.advantages-main-pg__card--light .advantages-main-pg__card-title {
+     color: #272425;
+     font-size: 22px;
+     line-height: 1.2;
+     margin-bottom: 5px;
+}
+
+.advantages-main-pg__card--light .advantages-main-pg__card-text {
+     color: #758589;
+     font-size: 16px;
+     line-height: 1.4;
+}
+
+.advantages-main-pg__card-img {
+     position: absolute;
+     pointer-events: none;
+     z-index: 1;
+}
+
+.advantages-main-pg__card-img--bottom {
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 100%;
+     max-height: 190px;
+     object-fit: contain;
+     object-position: bottom;
+}
+
+.advantages-main-pg__card-img--bottom-right {
+     bottom: 0;
+     right: 0;
+     object-fit: contain;
+     object-position: bottom right;
+     mix-blend-mode: darken;
+}
+
+.advantages-main-pg__card-content {
+     position: relative;
+     z-index: 2;
+}
+
+.advantages-main-pg__card-title {
+     margin: 0;
+     font-weight: 600;
+}
+
+.advantages-main-pg__card-text {
+     margin: 0;
+     font-weight: 500;
+}
+
+.advantages-main-pg__card--reviews {
+     background-color: #eceeee;
+     height: 100%;
+}
+
+.advantages-main-pg__reviews-header .advantages-main-pg__card-title {
+     color: #272425;
+     font-size: 27px;
+     line-height: 1.2;
+}
+
+.advantages-main-pg__slider-wrapper {
+     position: relative;
+     margin-top: 48px;
+}
+
+.advantages-main-pg__slider {
+     width: 100%;
+     padding-bottom: 30px !important;
+}
+
+.advantages-main-pg__review-card {
+     background: #ffffff;
+     padding: 20px 25px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.advantages-main-pg__author {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+
+.advantages-main-pg__avatar {
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: #eceeee;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-shrink: 0;
+}
+
+.advantages-main-pg__author-info {
+     display: flex;
+     flex-direction: column;
+}
+
+.advantages-main-pg__author-name {
+     color: #272425;
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 1.3;
+}
+
+.advantages-main-pg__author-company {
+     color: #758589;
+     font-size: 13px;
+     font-weight: 400;
+     line-height: 1.3;
+}
+
+.advantages-main-pg__review-text {
+     color: #758589;
+     font-size: 14px;
+     font-weight: 400;
+     line-height: 1.3;
+     display: -webkit-box;
+     -webkit-line-clamp: 4;
+     -webkit-box-orient: vertical;
+     overflow: hidden;
+}
+
+.advantages-main-pg__review-link {
+     color: #009bc8;
+     font-size: 14px;
+     font-weight: 500;
+     text-decoration: none;
+     border-bottom: 1px solid #009bc8;
+     align-self: flex-start;
+     transition: opacity 0.2s ease;
+}
+
+.advantages-main-pg__review-link:hover {
+     opacity: 0.7;
+}
+
+.advantages-main-pg__arrow {
+     position: absolute;
+     top: 40%;
+     transform: translateY(-50%);
+     z-index: 10;
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     background: #ffffff;
+     box-shadow: 0px 4px 15px rgba(15, 56, 90, 0.12);
+     backdrop-filter: blur(8px);
+     border: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     transition:
+          opacity 0.2s ease,
+          background-color 0.2s ease;
+}
+
+.advantages-main-pg__arrow:hover {
+     background: #f5f5f5;
+}
+
+.advantages-main-pg__arrow.swiper-button-disabled {
+     opacity: 0.4;
+     cursor: not-allowed;
+}
+
+.advantages-main-pg__arrow--prev {
+     left: -15px;
+}
+
+.advantages-main-pg__arrow--next {
+     right: -15px;
+}
+
+.advantages-main-pg__pagination {
+     bottom: 0 !important;
+}
+
+.advantages-main-pg__pagination .swiper-pagination-bullet {
+     width: 20px;
+     height: 2px;
+     border-radius: 0;
+     background: #ffffff;
+     opacity: 1;
+     margin: 0 4px !important;
+     transition: background-color 0.2s ease;
+}
+
+.advantages-main-pg__pagination .swiper-pagination-bullet-active {
+     background: #0f385a;
+}
+
+.advantages-main-pg__rating {
+     margin-top: auto;
+}
+
+.advantages-main-pg__rating,
+.advantages-main-pg__rating-left {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+}
+
+.advantages-main-pg__yandex-logo {
+     width: 60px;
+     height: 60px;
+     object-fit: contain;
+     flex-shrink: 0;
+}
+
+.advantages-main-pg__rating-score {
+     color: #272425;
+     font-size: 68px;
+     font-weight: 500;
+     line-height: 1;
+}
+
+.advantages-main-pg__rating-details {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 4px;
+     margin-left: 18px;
+}
+
+.advantages-main-pg__stars {
+     display: flex;
+}
+
+.advantages-main-pg__star {
+     width: 30px;
+     height: 30px;
+     object-fit: contain;
+}
+
+.advantages-main-pg__rating-count {
+     color: #758589;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.advantages-main-pg-dotts {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 19px;
+}
+
+.advantages-main-pg-dotts .swiper-pagination-bullet {
+     width: 20px;
+     height: 2px;
+}
+
+/* ========================================================================== */
+
+.catalog-section {
+     padding-top: 70px;
+     padding-bottom: 30px;
+     background-color: var(--color-bg);
+}
+
+.catalog-section__header {
+     margin-bottom: 35px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+}
+
+.catalog-section__subtitle {
+     font-size: 17px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: var(--color-gray-dark);
+}
+
+.catalog-section__title {
+     font-size: 30px;
+     font-weight: 600;
+     line-height: 1.4;
+     color: var(--color-dark);
+     max-width: 700px;
+}
+
+/* Сетка карточек */
+.catalog-section__grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 21px;
+}
+
+/* Карточка */
+.catalog-section__card {
+     height: 120px;
+     padding: 15px;
+     background-color: var(--color-white);
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     text-decoration: none;
+     overflow: hidden;
+     transition:
+          box-shadow var(--transition-fast),
+          transform var(--transition-fast);
+}
+
+.catalog-section__card:hover {
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.catalog-section__card-img {
+     width: 90px;
+     height: 90px;
+     object-fit: contain;
+     flex-shrink: 0;
+}
+
+.catalog-section__card-img--small {
+     width: 80px;
+     height: 80px;
+}
+
+.catalog-section__card-info {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: flex-start;
+     gap: 5px;
+     min-width: 0;
+}
+
+.catalog-section__card-title {
+     font-size: 15px;
+     font-weight: 500;
+     line-height: 1.3;
+     color: var(--color-dark);
+     word-wrap: break-word;
+}
+
+.catalog-section__card-count {
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: var(--color-gray-dark);
+}
+
+.partners-section-main-pg {
+     padding-top: 30px;
+     padding-bottom: 50px;
+}
+
+.partners-section-main-pg .partners-grid {
+     grid-template-columns: repeat(6, 1fr);
+}
+
+.partners-section-main-pg .partners-section__header {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-end;
+     max-width: 100%;
+}
+
+/* ======================================================================================== */
+
+.about-section {
+     padding-block: 90px;
+     background-color: #ffffff;
+}
+
+.about-section__inner {
+     display: flex;
+     gap: 20px;
+     align-items: stretch;
+}
+
+/* Левый баннер с картинкой */
+.about-section__banner {
+     flex: 1;
+     min-height: 584px;
+     position: relative;
+     display: flex;
+     align-items: stretch;
+     overflow: hidden;
+}
+
+.about-section__banner::before {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+     background: linear-gradient(270.26deg, rgba(0, 0, 0, 0) 12.13%, rgba(0, 0, 0, 0.63) 99.68%);
+     z-index: 2;
+}
+
+.about-section__banner-img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     z-index: 1;
+}
+
+.about-section__stats-wrapper {
+     position: relative;
+     display: flex;
+}
+
+.about-section__stats-wrapper::before {
+     content: "";
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     left: 0;
+     top: 0;
+     backdrop-filter: blur(19.200000762939453px);
+     background: linear-gradient(90deg, #272425 0%, rgba(39, 36, 37, 0) 100%);
+     z-index: 1;
+}
+
+/* Плашка со статистикой поверх картинки */
+.about-section__stats {
+     position: relative;
+     z-index: 2;
+     width: 194px;
+     padding: 40px 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.about-section__stat-item {
+     padding: 23px 13px;
+     border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+     display: flex;
+     flex-direction: column;
+     gap: 6px;
+}
+
+.about-section__stat-item:last-child {
+     border-bottom: none;
+}
+
+.about-section__stat-number {
+     font-size: 38px;
+     font-weight: 900;
+     line-height: 1;
+     color: #ffffff;
+}
+
+.about-section__stat-label {
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.2;
+     color: rgba(255, 255, 255, 0.8);
+}
+
+/* Правый контентный блок */
+.about-section__content {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+}
+
+.about-section__badge {
+     display: inline-block;
+     padding: 5px 10px;
+     background-color: #0f385a;
+     color: #ffffff;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.3;
+     margin-bottom: 10px;
+}
+
+.about-section__title {
+     font-size: 30px;
+     font-weight: 600;
+     line-height: 1.4;
+     color: var(--color-dark);
+     margin-bottom: 10px;
+}
+
+.about-section__subtitle {
+     font-size: 20px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: #758589;
+     margin-bottom: 20px;
+}
+
+/* Сетка карточек преимуществ */
+.about-section__advantages {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 20px;
+     width: 100%;
+}
+
+.about-section__adv-card {
+     background-color: var(--color-bg);
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     align-items: flex-start;
+}
+
+.about-section__adv-icon {
+     width: 45px;
+     height: 45px;
+     background-color: #ffffff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-shrink: 0;
+}
+
+.about-section__adv-info {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+}
+
+.about-section__adv-title {
+     font-size: 16px;
+     font-weight: 700;
+     line-height: 1.2;
+     color: var(--color-dark);
+}
+
+.about-section__adv-desc {
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+     color: #758589;
+}
+
+.certificates-main-pg {
+     background-color: #ffffff;
+     padding-block: 70px;
+}
+
+.certificates-main-pg__inner {
+     background: #eceeee;
+     padding: 40px;
+     display: flex;
+     gap: 40px;
+     box-sizing: border-box;
+}
+
+.certificates-main-pg__info {
+     width: 451px;
+     flex-shrink: 0;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.certificates-main-pg__header {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 10px;
+}
+
+.certificates-main-pg__title {
+     color: #272425;
+     font-size: 30px;
+     font-weight: 600;
+     line-height: 1.4;
+}
+
+.certificates-main-pg__subtitle {
+     color: #758589;
+     font-size: 22px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.certificates-main-pg__link {
+     color: #272425;
+     font-size: 15px;
+     font-weight: 500;
+     text-decoration: none;
+     border-bottom: 1px solid #272425;
+     padding-bottom: 1px;
+     transition: opacity 0.2s ease;
+}
+
+.certificates-main-pg__link:hover {
+     opacity: 0.7;
+}
+
+.certificates-main-pg__features {
+     display: flex;
+     gap: 20px;
+}
+
+.certificates-main-pg__feature {
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     flex: 1;
+}
+
+.certificates-main-pg__feature-icon {
+     width: 45px;
+     height: 45px;
+     background: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-shrink: 0;
+}
+
+.certificates-main-pg__feature-text {
+     color: #758589;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.certificates-main-pg__slider-wrapper {
+     flex: 1;
+     min-width: 0;
+     position: relative;
+}
+
+.certificates-main-pg__arrow {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     z-index: 10;
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     background: #ffffff;
+     box-shadow: 0px 5px 19.7px rgba(15, 56, 90, 0.12);
+     backdrop-filter: blur(10px);
+     border: none;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     transition:
+          opacity 0.2s ease,
+          background-color 0.2s ease;
+}
+
+.certificates-main-pg__arrow:hover {
+     background: #f5f5f5;
+}
+
+.certificates-main-pg__arrow.swiper-button-disabled {
+     opacity: 0.4;
+     cursor: not-allowed;
+}
+
+.certificates-main-pg__arrow--prev {
+     left: -17px;
+}
+
+.certificates-main-pg__arrow--next {
+     right: -17px;
+}
+
+.certificates-main-pg__slider {
+     width: 100%;
+}
+
+.certificates-main-pg__card {
+     height: 265px;
+     background: #ffffff;
+     padding: 20px;
+     position: relative;
+     overflow: hidden;
+     box-sizing: border-box;
+     display: flex;
+     flex-direction: column;
+}
+
+.certificates-main-pg__card-meta {
+     display: flex;
+     flex-direction: column;
+     gap: 5px;
+     z-index: 2;
+     position: relative;
+}
+
+.certificates-main-pg__card-title {
+     color: #272425;
+     font-size: 16px;
+     font-weight: 600;
+     line-height: 1.1;
+}
+
+.certificates-main-pg__card-size {
+     color: #758589;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 1.1;
+}
+
+.certificates-main-pg__card-preview {
+     position: absolute;
+     top: 99px;
+     left: 70px;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+}
+
+.certificates-main-pg__card-img {
+     width: auto;
+     max-width: 100%;
+     height: auto;
+     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.leader-main-pg {
+     background-color: #ffffff;
+     padding-block: 50px;
+}
+
+.leader-main-pg__slider-wrapper {
+     position: relative;
+}
+
+.leader-main-pg__card {
+     display: flex;
+     align-items: center;
+     gap: 40px;
+     background: #ffffff;
+}
+
+.leader-main-pg__avatar {
+     width: 230px;
+     height: 230px;
+     border-radius: 50%;
+     object-fit: cover;
+     flex-shrink: 0;
+}
+
+.leader-main-pg__content {
+     display: flex;
+     flex-direction: column;
+     gap: 19px;
+     flex: 1;
+}
+
+.leader-main-pg__info {
+     display: flex;
+     flex-direction: column;
+     gap: 7px;
+}
+
+.leader-main-pg__name {
+     color: #0f385a;
+     font-size: 22px;
+     font-weight: 600;
+     line-height: 1.2;
+}
+
+.leader-main-pg__position {
+     color: #758589;
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 1.4;
+}
+
+.leader-main-pg__text {
+     color: #272425;
+     font-size: 22px;
+     font-weight: 500;
+     line-height: 1.3;
+}
+
+.leader-main-pg__text-mobile {
+     display: none;
+}
+
+.discount-main-pg {
+     padding-top: 90px;
+     padding-bottom: 70px;
+}
+
+.discount-main-pg__header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 20px;
+     margin-bottom: 30px;
+}
+
+.discount-main-pg__header .tabs-nav {
+     margin-bottom: 0;
+}
+
+/* === Адаптив === */
+@media (max-width: 1280px) {
+     .hero-main-pg__aside {
+          flex: 0 0 415px;
+     }
+     .hero-main-pg__stat-num {
+          font-size: 31px;
+     }
+
+     .advantages-main-pg__title {
+          width: 560px;
+          font-size: 25px;
+     }
+
+     .advantages-main-pg__yandex-logo {
+          width: 50px;
+          height: 50px;
+     }
+     .advantages-main-pg__rating-score {
+          font-size: 48px;
+     }
+
+     .advantages-main-pg__rating-details {
+          align-items: flex-start;
+          margin-left: 0px;
+     }
+
+     .advantages-main-pg__star {
+          width: 20px;
+          height: 20px;
+     }
+
+     .advantages-main-pg__rating-count {
+          font-size: 12px;
+     }
+
+     .certificates-main-pg__info {
+          width: 365px;
+     }
+
+     .certificates-main-pg__inner {
+          padding: 30px;
+     }
+}
+
+@media (max-width: 1200px) {
+     .business-section__inner {
+          flex-direction: column;
+     }
+
+     .business-section__main-card {
+          flex: auto;
+     }
+
+     .business-section__side-decor {
+          width: 207px;
+          height: 147px;
+     }
+
+     .business-section__side-card {
+          min-height: 250px;
+     }
+
+     .media-section__content {
+          flex: 0 0 535px;
+     }
+
+     .categories-main-pg__subgrid {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: auto;
+     }
+
+     .categories-main-pg__card-title {
+          font-size: 14px;
+     }
+
+     .catalog-section__grid {
+          grid-template-columns: repeat(3, 1fr);
+     }
+
+     .partners-section-main-pg .partners-grid {
+          grid-template-columns: repeat(5, 1fr);
+     }
+
+     .certificates-main-pg__feature {
+          flex-direction: column;
+          align-items: flex-start;
+     }
+}
+
+@media (max-width: 1024px) {
+     .hero-main-pg__layout {
+          flex-direction: column;
+     }
+
+     .hero-main-pg__slider {
+          width: 100%;
+          flex: 0 1 521px;
+     }
+
+     .hero-main-pg__aside {
+          flex-direction: row;
+          flex: 0 0 321px;
+     }
+
+     .hero-main-pg__card-link {
+          margin-top: 8px;
+     }
+
+     .hero-main-pg__card-img {
+          top: inherit;
+          bottom: -15px;
+          height: 57%;
+          object-fit: cover;
+     }
+
+     .hero-main-pg__nav {
+          left: 20px;
+          bottom: 20px;
+     }
+
+     .hero-main-pg__card {
+          flex-direction: column;
+          gap: 20px;
+     }
+
+     .hero-main-pg__card-content {
+          width: 100%;
+     }
+
+     .hero-main-pg__stats {
+          padding-left: 0;
+          flex-direction: row;
+          gap: 20px;
+     }
+
+     .partners-section-main-pg .partners-grid {
+          grid-template-columns: repeat(4, 1fr);
+     }
+
+     .about-section__inner {
+          flex-direction: column;
+     }
+
+     .about-section__banner {
+          min-height: 400px;
+     }
+}
+
+@media (max-width: 992px) {
+     .media-section__inner {
+          flex-direction: column;
+          gap: 30px;
+     }
+
+     .media-section__content {
+          width: 100%;
+          flex: 0 1 100%;
+     }
+
+     .media-section__description {
+          font-size: 18px;
+     }
+
+     .reviews-main-pg__slider {
+          margin-bottom: 30px;
+     }
+
+     .advantages-main-pg {
+          padding-block: 70px;
+     }
+
+     .advantages-main-pg__grid {
+          grid-template-columns: repeat(2, 1fr);
+          height: auto;
+     }
+
+     .advantages-main-pg__card--tall {
+          min-height: 400px;
+     }
+
+     .advantages-main-pg__column {
+          min-height: 600px;
+     }
+
+     .advantages-main-pg__card--reviews {
+          grid-column: span 2;
+     }
+
+     .advantages-main-pg__header {
+          flex-direction: column;
+          gap: 10px;
+     }
+
+     .partners-section-main-pg .partners-grid {
+          grid-template-columns: repeat(3, 1fr);
+     }
+
+     .discount-main-pg__header {
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 25px;
+          align-items: flex-start;
+     }
+}
+
+@media (max-width: 880px) {
+     .categories-main-pg {
+          padding-top: 50px;
+          padding-bottom: 30px;
+     }
+
+     .categories-main-pg__grid {
+          flex-direction: column;
+          gap: 15px;
+     }
+
+     .categories-main-pg__subgrid {
+          gap: 15px;
+     }
+
+     .categories-main-pg__card--featured {
+          width: 100%;
+          height: 170px;
+     }
+
+     .categories-main-pg__card {
+          min-height: 170px;
+     }
+
+     .catalog-section__grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+
+     .certificates-main-pg__inner {
+          flex-direction: column;
+     }
+
+     .certificates-main-pg__info {
+          width: 100%;
+          gap: 35px;
+     }
+}
+
+@media (max-width: 768px) {
+     .expert-content__header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          margin-bottom: 17px;
+     }
+
+     .reviews-main-pg {
+          padding: 0;
+          padding-bottom: 52px;
+     }
+
+     .reviews-main-pg__link-all {
+          display: none;
+     }
+
+     .advantages-main-pg__header {
+          flex-direction: column;
+          gap: 15px;
+     }
+
+     .advantages-main-pg__title {
+          width: 100%;
+          font-size: 24px;
+     }
+
+     .advantages-main-pg__subtitle {
+          font-size: 18px;
+     }
+
+     .projects-main-pg__card {
+          height: 355px;
+     }
+
+     .leader-main-pg__text {
+          display: none;
+     }
+
+     .leader-main-pg__card {
+          align-items: flex-end;
+          gap: 20px;
+     }
+
+     .leader-main-pg__avatar {
+          width: 118px;
+          height: 118px;
+     }
+
+     .leader-main-pg__text-mobile {
+          display: block;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 130%;
+          color: #272425;
+          margin-top: 16px;
+     }
+}
+
+@media (max-width: 660px) {
+     .business-section,
+     .expert-main-pg,
+     .advantages-main-pg,
+     .consult-banner,
+     .partners-section-main-pg,
+     .about-section,
+     .projects-main-pg {
+          padding-block: 30px;
+     }
+
+     .media-section {
+          padding-block: 50px;
+     }
+
+     .hero-main-pg {
+          padding: 0px;
+     }
+
+     .discount-main-pg {
+          padding-block: 40px;
+     }
+
+     .business-section__main-card {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+     }
+
+     .business-section__helmet-img {
+          position: relative;
+          transform: translateY(0%);
+          max-width: 307px;
+          margin-bottom: -50px;
+     }
+
+     .business-section__content {
+          margin-top: 0px;
+     }
+
+     .business-section__img-decor {
+          margin: 0 auto;
+     }
+
+     .business-section__inner {
+          gap: 15px;
+     }
+
+     .business-section__side-card {
+          min-height: 240px;
+          padding: 15px;
+     }
+
+     .business-section__side-decor {
+          width: 110px;
+          height: 122px;
+     }
+
+     .business-section__side-title {
+          font-size: 18px;
+     }
+
+     .business-section__list-item {
+          font-size: 14px;
+     }
+
+     .business-section__tag {
+          font-size: 12px;
+     }
+
+     .expert-content__header .tabs-nav__btn {
+          height: 40px;
+          font-size: 12px;
+     }
+
+     .media-section__item {
+          flex-wrap: wrap;
+     }
+
+     .media-section__logo-wrapper {
+          width: 80px;
+          height: 61px;
+     }
+
+     .media-section__arrow-btn,
+     .media-section__link {
+          display: none;
+     }
+
+     .media-section__footer {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 15px;
+          padding-top: 20px;
+     }
+
+     .media-section__description {
+          font-size: 16px;
+     }
+
+     .media-section__inner {
+          gap: 20px;
+     }
+
+     .media-section__category {
+          font-size: 12px;
+     }
+
+     .media-section__item-title,
+     .media-section__count {
+          font-size: 14px;
+     }
+
+     .reviews-main-pg__card-company {
+          font-size: 12px;
+     }
+
+     .reviews-main-pg__subtitle {
+          font-size: 15px;
+     }
+
+     .partners-main-pg__card {
+          padding: 14px 10px;
+     }
+
+     .hero-main-pg__card-title {
+          font-size: 15px;
+     }
+
+     .hero-main-pg__card-text,
+     .hero-main-pg__card-link {
+          font-size: 12px;
+     }
+
+     .hero-main-pg__stat-num {
+          font-size: 22px;
+     }
+
+     .hero-main-pg__stat-desc {
+          font-size: 10px;
+     }
+
+     .partners-main-pg__item {
+          height: 44px;
+     }
+     .partners-main-pg__logo {
+          max-width: 80%;
+     }
+     .hero-main-pg__aside {
+          flex: 0 0 220px;
+          gap: 15px;
+     }
+     .hero-main-pg__card {
+          padding: 15px;
+     }
+     .hero-main-pg__stats {
+          gap: 12px;
+     }
+
+     .hero-main-pg__slider {
+          flex: 0 1 390px;
+          min-height: 100%;
+     }
+
+     .hero-main-pg__arrow {
+          display: none;
+     }
+
+     .categories-main-pg__all-link {
+          display: none;
+     }
+
+     .categories-main-pg__card-count {
+          font-size: 12px;
+     }
+
+     .categories-main-pg__card-img {
+          max-width: 51%;
+     }
+
+     .advantages-main-pg__header {
+          gap: 10px;
+     }
+
+     .advantages-main-pg__title,
+     .advantages-main-pg__card--tall .advantages-main-pg__card-title {
+          font-size: 22px;
+          margin-bottom: 5px;
+     }
+
+     .advantages-main-pg__subtitle,
+     .advantages-main-pg__card--tall .advantages-main-pg__card-text {
+          font-size: 16px;
+     }
+
+     .advantages-main-pg__column {
+          min-height: 100%;
+     }
+
+     .advantages-main-pg__card {
+          padding: 20px;
+          min-height: 270px;
+     }
+
+     .advantages-main-pg__card--tall {
+          min-height: 370px;
+     }
+
+     .advantages-main-pg__grid {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+     }
+
+     .advantages-main-pg__card-overlay {
+          background: linear-gradient(
+               180deg,
+               rgba(0, 0, 0, 0.59) 18.27%,
+               rgba(0, 0, 0, 0) 51.92%,
+               rgba(0, 0, 0, 0.15) 73.08%,
+               rgba(0, 0, 0, 0.59) 78.37%
+          );
+     }
+
+     .advantages-main-pg__card--reviews {
+          padding: 30px;
+     }
+
+     .advantages-main-pg__reviews-header .advantages-main-pg__card-title {
+          font-size: 22px;
+     }
+
+     .advantages-main-pg__slider-wrapper {
+          margin-top: 30px;
+     }
+
+     .advantages-main-pg__arrow {
+          display: none;
+     }
+
+     .advantages-main-pg__rating-details {
+          margin-left: auto;
+     }
+
+     .advantages-main-pg__star {
+          width: 25px;
+          height: 25px;
+     }
+
+     .advantages-main-pg__rating-score {
+          font-size: 54px;
+     }
+
+     .advantages-main-pg__slider {
+          padding-bottom: 0px !important;
+     }
+
+     .advantages-main-pg__rating {
+          margin-top: 51px;
+     }
+
+     .catalog-section__grid {
+          gap: 10px;
+     }
+
+     .catalog-section__card {
+          height: 220px;
+          flex-direction: column;
+          align-items: flex-start;
+     }
+
+     .catalog-section__card-info {
+          flex: 0;
+          margin-top: auto;
+     }
+
+     .partners-section-main-pg .partners-grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+
+     .partners-section-main-pg .partners-grid__item {
+          height: 110px;
+          padding: 15px;
+     }
+
+     .projects-main-pg__link-all {
+          display: none;
+     }
+
+     .projects-main-pg__card-title {
+          font-size: 18px;
+     }
+
+     .projects-main-pg__header {
+          margin-bottom: 22px;
+     }
+
+     .about-section__banner {
+          min-height: auto;
+     }
+
+     .about-section__stats {
+          padding: 10px 15px;
+     }
+
+     .about-section__title {
+          font-size: 22px;
+     }
+
+     .about-section__subtitle {
+          font-size: 16px;
+     }
+
+     .about-section__stat-item {
+          padding: 13.5px 13px;
+     }
+
+     .about-section__adv-card {
+          padding: 15px;
+     }
+
+     .about-section__advantages {
+          gap: 15px;
+     }
+
+     .certificates-main-pg {
+          padding-block: 30px;
+     }
+
+     .certificates-main-pg__inner {
+          padding: 20px;
+          gap: 20px;
+     }
+
+     .certificates-main-pg__title {
+          font-size: 24px;
+     }
+
+     .certificates-main-pg__subtitle {
+          font-size: 16px;
+     }
+
+     .certificates-main-pg__arrow {
+          display: none;
+     }
+
+     .certificates-main-pg__card-title {
+          font-size: 13px;
+     }
+
+     .certificates-main-pg__card-size {
+          font-size: 12px;
+     }
+
+     .certificates-main-pg__card {
+          padding: 16px;
+          height: 213px;
+     }
+
+     .certificates-main-pg__card-preview {
+          top: 74px;
+          left: 58px;
+     }
+
+     .leader-main-pg__name {
+          font-size: 18px;
+     }
+}
+
+@media (max-width: 385px) {
+     .consult-banner__social-btn {
+          width: 35px;
+          height: 35px;
+     }
+
+     .consult-banner__social-btn svg {
+          width: 18px;
+          height: 18px;
+     }
+
+     .consult-banner__btn-arrow {
+          display: none;
+     }
+
+     .consult-banner__btn {
+          height: 35px;
+          font-size: 12px;
+     }
+}
+
+@media (max-width: 340px) {
+     .business-section__side-cards {
+          gap: 10px;
+     }
+     .business-section__side-card {
+          padding: 10px;
+     }
+     .business-section__list-item,
+     .hero-main-pg__card-title {
+          font-size: 12px;
+     }
+     .business-section__side-title {
+          font-size: 16px;
+     }
+
+     .hero-main-pg__card-text,
+     .hero-main-pg__card-link {
+          font-size: 10px;
+     }
+
+     .advantages-main-pg__yandex-logo {
+          width: 40px;
+          height: 40px;
+     }
+
+     .advantages-main-pg__rating-score {
+          font-size: 44px;
+     }
+}

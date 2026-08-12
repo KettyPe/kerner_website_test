@@ -605,8 +605,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewSwiper = new Swiper('.review-item__gallery', {
 
         spaceBetween: 8,
-        // freeMode: true,
-        // Навигация и пагинация отключены по дизайну
 
         pagination: {
             el: '.review-item-gallery-dotts',
@@ -692,6 +690,246 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
             type: 'bullets'
         },
+    });
+
+    const heroSlider = new Swiper('.hero-main-pg__slider', {
+        loop: true,
+        speed: 600,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+        navigation: {
+            nextEl: '.hero-main-pg__arrow--next',
+            prevEl: '.hero-main-pg__arrow--prev',
+        },
+        pagination: {
+            el: '.hero-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+    });
+
+    const projectsSwiper = new Swiper('.projects-main-pg__slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+
+        navigation: {
+            nextEl: '.projects-main-pg__arrow--next',
+            prevEl: '.projects-main-pg__arrow--prev',
+        },
+
+        pagination: {
+            el: '.projects-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            590: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    const advantagesSwiper = new Swiper('.advantages-main-pg__slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: '.advantages-main-pg__arrow--next',
+            prevEl: '.advantages-main-pg__arrow--prev',
+        },
+
+        pagination: {
+            el: '.advantages-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+    });
+
+    const reviewsSwiper = new Swiper('.reviews-main-pg__slider', {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        loop: true,
+
+        navigation: {
+            nextEl: '.reviews-main-pg__arrow--next',
+            prevEl: '.reviews-main-pg__arrow--prev',
+        },
+
+        pagination: {
+            el: '.reviews-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    const partnersSwiper = new Swiper('.partners-main-pg__slider', {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        loop: true,
+        grabCursor: true,
+        simulateTouch: true,
+        autoplay: {
+             delay: 3000,
+             disableOnInteraction: false,
+        },
+        breakpoints: {
+            380: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            1024: {
+                slidesPerView: 6.5,
+            },
+            1200: {
+                slidesPerView: 7.5,
+            },
+        },
+    });
+
+    const leaderSwiper = new Swiper('.leader-main-pg__slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+
+        navigation: {
+            nextEl: '.leader-main-pg__arrow--next',
+            prevEl: '.leader-main-pg__arrow--prev',
+        },
+
+        pagination: {
+            el: '.leader-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true 
+        },
+    });
+
+    const certificatesSwiper = new Swiper('.certificates-main-pg__slider', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        loop: true,
+
+        navigation: {
+            nextEl: '.certificates-main-pg__arrow--next',
+            prevEl: '.certificates-main-pg__arrow--prev',
+        },
+
+        pagination: {
+            el: '.certificates-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            350: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            650: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            880: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1100: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    const expertSlider3 = new Swiper('.news-expert-main-pg-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: '.news-expert-main-pg-next',
+            prevEl: '.news-expert-main-pg-prev',
+        },
+
+        pagination: {
+            el: '.news-expert-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1280: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+            }
+        }
+    });
+
+    const expertSlider2 = new Swiper('.video-expert-main-pg-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: '.js-video-expert-main-pg-next',
+            prevEl: '.js-video-expert-main-pg-prev',
+        },
+
+        pagination: {
+            el: '.video-expert-main-pg-dotts',
+            clickable: true,
+            type: 'bullets'
+        },
+
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1280: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+            }
+        }
     });
 });
 
