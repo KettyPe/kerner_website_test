@@ -593,6 +593,10 @@
      object-position: left;
 }
 
+.hero-main-pg__banner-img-mb {
+     display: none;
+}
+
 .hero-main-pg__nav {
      position: absolute;
      bottom: 30px;
@@ -2832,6 +2836,14 @@
 
      .discount-main-pg__header .tabs-nav {
           width: 100%;
+     }
+
+     .hero-main-pg__banner-img-dc {
+          display: none;
+     }
+
+     .hero-main-pg__banner-img-mb {
+          display: block;
      }
 }
 
