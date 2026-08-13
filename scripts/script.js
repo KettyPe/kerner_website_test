@@ -786,7 +786,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    const partnersSwiper = new Swiper('.partners-main-pg__slider', {
+/*     const partnersSwiper = new Swiper('.partners-main-pg__slider', {
         slidesPerView: 3,
         spaceBetween: 0,
         loop: true,
@@ -811,7 +811,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
     });
-
+ */
     const leaderSwiper = new Swiper('.leader-main-pg__slider', {
         slidesPerView: 1,
         spaceBetween: 30,
