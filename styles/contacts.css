@@ -1,3 +1,7 @@
+span {
+     color: inherit;
+}
+
 .help-section--before-footer {
      background: linear-gradient(180deg, var(--color-white) 50%, var(--color-border) 50%);
 }
