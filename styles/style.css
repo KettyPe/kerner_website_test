@@ -2570,23 +2570,48 @@
     background-color: var(--color-white);
 }
 
-.help-wrapper {
-    background-color: var(--color-dark-blue);
-    padding: 40px;
-    display: flex;
-    gap: 40px;
+.help-section .container {
     position: relative;
-    overflow: hidden;
 }
 
-.help-wrapper::before {
-    content: "";
+.help-section-bg {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
-    background: url(../img/main-page/logo-help-section.svg) no-repeat;
+}
+
+.help-section-bg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+}
+
+.help-section-bg--mob {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .help-section-bg--desctope {
+        display: none;
+    }
+
+    .help-section-bg--mob {
+        display: block;
+    }
+}
+
+.help-wrapper {
+    /* background-color: var(--color-dark-blue); */
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    position: relative;
+    overflow: hidden;
 }
 
 .help-info {
