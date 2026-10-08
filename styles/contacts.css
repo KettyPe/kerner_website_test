@@ -86,7 +86,9 @@ span {
      opacity: 0;
      transform: scaleX(0);
      transform-origin: center;
-     transition: transform 0.4s ease, opacity 0.25s ease;
+     transition:
+          transform 0.4s ease,
+          opacity 0.25s ease;
 }
 
 .hero-contacts-pg__nav-wrapper.is-fixed {
@@ -909,6 +911,12 @@ span {
      }
 }
 
+@media (max-width: 640px) {
+     .head-office-gallery-contacts-pg__slide {
+          height: 131px;
+     }
+}
+
 .spb-warehouse-contacts-pg {
      background-color: #192631;
      padding: 80px 0 70px;
@@ -1033,6 +1041,7 @@ span {
      color: var(--color-white);
      font-weight: 700;
      text-decoration: underline;
+     white-space: nowrap;
 }
 
 .spb-warehouse-contacts-pg__media-card {
@@ -1727,10 +1736,6 @@ span {
      .team-contacts-pg__info,
      .team-contacts-pg__details {
           align-items: center;
-     }
-
-     .team-contacts-pg__copy-btn {
-          display: none;
      }
 }
 
