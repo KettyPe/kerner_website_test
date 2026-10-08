@@ -79,7 +79,16 @@
     --color-navy: #192631;
     --color-gray-hover-bg: #f5f5f5;
     --color-gray-faint: #f0f0f0;
-
+    /* === Новые цвета (добавлены для contacts.css) === */
+    --color-bg-rgb: 236, 238, 238;
+    --color-bg-10: rgba(236, 238, 238, 0.1);
+    --color-bg-20: rgba(236, 238, 238, 0.2);
+    --color-bg-cool: #f3f5f9;
+    --color-white-3: rgba(255, 255, 255, 0.03);
+    --color-gray-darker: #4e5356;
+    --color-navy-light: #202d37;
+    --color-green-dark: #11ad19;
+    --color-pink: #ed92ed;
 }
 
 * {
