@@ -783,7 +783,7 @@ span {
 }
 
 .spb-warehouse-contacts-pg__steps-title {
-     font-size: 20px;
+     font-size: 19px;
      font-weight: 600;
      line-height: 1.4;
      color: var(--color-white);
@@ -858,6 +858,17 @@ span {
      height: 100%;
      object-fit: cover;
      display: block;
+}
+
+.spb-warehouse-contacts-pg__map {
+     position: absolute;
+     inset: 0;
+     z-index: 0;
+     isolation: isolate;
+}
+
+.spb-warehouse-contacts-pg__media-card .contacts-pg__map-badge {
+     z-index: 1;
 }
 
 .spb-warehouse-contacts-pg__youtube-btn {
